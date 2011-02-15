@@ -130,7 +130,15 @@ body {
 				font-size: 60px;
 				text-align: center;
 				margin: 0 0 10px 0;
+        position: relative;
 			}
+
+      #hd1 h1 span {
+        position: absolute;
+        left: 60px;
+        top: 40%;
+        font-size: 30%;
+      }
 
 			#hd1 h2 {
 				font-size: 14px;
@@ -208,7 +216,16 @@ body {
 			-webkit-column-count: 3;
 			-webkit-column-width: 117px;
 			-webkit-column-gap: 10px;
-		}
+      column-count: 3;
+      column-width: 117px;
+      column-gap: 10px;
+	  }
+
+    #ac1 article .content {
+      -moz-column-count: 3;
+      -moz-column-width: 117px;
+      -moz-column-gap: 10px;
+    }
 
 			#video {
 				display: block;
@@ -217,7 +234,6 @@ body {
 		
 			#video, #ac1 h1 {
 				-webkit-column-span: all;
-				-moz-column-span: all;
 				column-span: all;
 			}
 
@@ -227,12 +243,20 @@ body {
 				text-align: left;
 			}
 			
-		h1#lone {
+		#ac1 aside a {
+      font-family: LeagueGothicRegular, Tahoma, Geneva, sans-serif;
+      color: #484848;
+      text-transform: uppercase;
+      text-decoration: none;
 			background: transparent url(../images/bg-bike.png) no-repeat top right;
-			padding: 10px 0 10px 0;
+			padding: 10px 40px 10px 0;
 			font-size: 32px;
 			margin: -10px 5px 0 0;
 		}
+
+    #ac1 aside a:hover {
+      text-decoration: underline;
+    }
 
 		#ac2 {
 			padding: 0 4px 0 4px;
