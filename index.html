@@ -1,174 +1,180 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-
 	<meta charset="utf-8">
-
-	<title>The HTML5 Herald</title>
-	
-	<link rel="stylesheet" href="css/styles.css?v=1.0">
-
+	<title>HTML5 Herald</title>
+	<link rel="stylesheet" href="css/styles.css?v=1.0"/>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
 </head>
-
-<body>
-
-	<header id="hd1">
-
-		<hgroup>
-		<h1><span>The </span><a href="/">HTML5 Herald</a></h1>
-		<h2>produced with that good ol' timey html5 &amp; css3</h2>
-		</hgroup>
-	
-	</header><!-- #hd1 -->
-
-	<div id="volume">
-	<p>Vol. MMXI</p>
-	</div><!-- #volume -->
-	
-	<nav id="nv1">
+<body class="hyphenate">
+<header>
+    <hgroup>
+    <h1><span>The </span><a href="/">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
+    <h2>Produced with That Good ol' Timey HTML5 &amp; CSS3</h2>
+    </hgroup>
+	<nav>
 		<ul>
 			<li><a href="#top">Home</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
-	</nav><!-- #nv1 -->
-	
-	<div id="issue">
-	<p>No. 1</p>
-	</div><!-- #issue -->
+	</nav>
+	<p id="volume">Vol. MMXI</p>
+        <p id="issue"><time datetime="1904-06-04" pubdate>June 4, 1904</time></p>
+</header>	
+<div id="main">
+    <section class="leftabovefold"><!-- should this be section of div? it is a section of the home page? -->
+        <article id="ac1">
+            <video width="373" height="280" preload id="video" poster="images/poster.jpg" controls>
+                <!-- MP4 must be first for iPad! -->
+                <source src="media/bamboo.mp4" type="video/mp4"><!-- Safari / iOS video -->
+                <source src="media/bamboo.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
+                <!-- fallback to Flash: -->
+                <object width="373" height="280" type="application/x-shockwave-flash" data="http://player.longtailvideo.com/player.swf">
+                    <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+                    <param name="movie" value="http://player.longtailvideo.com/player.swf" />
+                    <param name="allowFullScreen" value="true" />
+                    <param name="wmode" value="transparent" />
+                    <param name="flashvars" value="controlbar=over&amp;image=images/poster.jpg&amp;file=media/bamboo.mp4">
+                    <!-- fallback image. note the title field below, put the title of the video there -->
+                    <img src="images/bamboo.jpg" width="373" height="280" alt="Betty Boop" title="No video playback capabilities, please download the video below">
+                </object>
+            </video>
+            
+            <h1>Video is the final frontier of man and now we have conquered it!</h1>
+            
+            <div class="content">
+                <p>Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla.</p>
+                
+                <p>In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>
+                
+                <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+            
+                <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+            </div>
+        </article>
+    
+      <article>
+        <h1>Great Things Are Possible with CSS Columns! Pip Pip Pip!</h1>
+        <div class="content">
+    <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
+             <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+            
+                <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                
+        </div>
+      </article>
+    </section>	
+    <section class="secondaryarticles">			
+        <article id="ac2">
+            <hgroup>
+                <h1>Text Shadow is the New Black</h1>
+                <h2>How do we do it?</h2>
+            </hgroup>
+            <div class="content">
+                <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
+            </div>
+        </article>
+                
+        <article id="ac3">
+            <hgroup>
+                <h1>Wai-Aria? HAHA!</h1>
+                <h2>Form Accessibility</h2>
+            </hgroup>
+            
+            <img src="images/cat.png" alt="WAI-ARIA Cat"/>
+            
+            <div class="content">
+                <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
+                
+                <p>Nam vestibulum, arcu sodales feugiat.</p>
+            </div>
+        </article>
+             <article id="ac4">
+            <hgroup>
+                <h1>Wai-Aria? HAHA!</h1>
+                <h2>Form Accessibility</h2>
+            </hgroup>
+            
+            <img src="images/cat.png" alt="WAI-ARIA Cat"/>
+            
+            <div class="content">
+                <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
+                
+                <p>Nam vestibulum, arcu sodales feugiat.</p>
+            </div>
+             </article>
+    </section>
+    <aside>
 
-	<div id="main" class="hyphenate">
-	
-		<div id="ac1">
-		
-			<article>
-			<video width="373" height="280" autobuffer="autobuffer" id="video" poster="images/poster.jpg" controls>
-				<!-- MP4 must be first for iPad! -->
-				<source src="media/bamboo.mp4" type="video/mp4"><!-- Safari / iOS video -->
-				<source src="media/bamboo.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
-				<!-- fallback to Flash: -->
-				<object width="373" height="280" type="application/x-shockwave-flash" data="http://player.longtailvideo.com/player.swf">
-					<!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
-					<param name="movie" value="http://player.longtailvideo.com/player.swf" />
-					<param name="allowFullScreen" value="true" />
-					<param name="wmode" value="transparent" />
-					<param name="flashvars" value="controlbar=over&amp;image=images/poster.jpg&amp;file=media/bamboo.mp4">
-					<!-- fallback image. note the title field below, put the title of the video there -->
-					<img src="images/bamboo.jpg" width="373" height="280" alt="Betty Boop" title="No video playback capabilities, please download the video below">
-				</object>
-			</video>
-	
-			<h1>Video is the final frontier of man and now we have conquered it! Pip Pip Pip!</h1>
-      <div class="content">
-			<p>Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla.</p>
-			
-			<p>In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>
-			
-			<p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <section id="ad1">
+            <h1>Wanted</h1>
+            <h2>For being totally awesome</h2>
+            <h3>&lt;HTML5&gt; &amp; {CSS3}</h3>
+            <p>Reward: happiness and satisfaction</p>
+        </section>
 
-			<p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
-      </div>
-			
-			</article>
-	  <aside><a href="http://sitepoint.com/books/rw1/">HTML5 and CSS3 Now in Book Form!</a></aside>		
-		</div><!-- #ac1 -->
-		
-		<div id="ac2">
-			
-			<article>
-			<hgroup>
-			<h1>Text Shadow is the New Black</h1>
-			<h2>How do we do it?</h2>
-			</hgroup>
-			
-			<p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
-			<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
-			</article>
-			
-			<article>
-			<hgroup>
-			<h1>Wai-Aria? HAHA!</h1>
-			<h2>Form Accessibility</h2>
-			</hgroup>
-			
-			<img src="images/cat.png" alt="WAI-ARIA Cat" width="113" height="93" class="article-image">
+        <section id="ad2">
+        <h1>Put your <span>dukes</span> up sire</h1>
+        <p>It's time for a good old thrashing. 
+        <br/>I will rotate your mustache OFF!</p>
 
-			<p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
-			
-			<p>Nam vestibulum, arcu sodales feugiat.</p>
+        </section>
 
-			</article>
+        <section id="ad3"  class="module">
+        <h1>HTML5 and CSS3 <br/>Now in Book Form!</h1>
+        </section>
 
-		</div><!-- #ac2 -->
+    </aside>
+        
+    <section class="primaryabovefold">	
+        <article id="ac4">
+            <hgroup>
+                <h1>CSS Transitions - The State of Play</h1>
+                <h2>The future?</h2>
+            </hgroup>
+            
+            <div class="content">
+                <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                
+                <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+                
+                <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                
+                <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+                    <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+                
+                <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+            </div>
+        </article>
+    </section>
+</div><!-- #main -->
+<form id="contact" action="post">
 
-		<aside id="sidebar">
+    <h1>Write a letter to our Editor</h1>
 
-			<section id="ad1">
+    <fieldset>
+    <label for="name">Hello, my name is</label>
+    <input type="text" id="name" name="name"/>
+    
+    <label for="subject">The title of my letter is</label>
+    <input type="text" id="subject" name="subject"/>
 
-			</section>
+    <label for="message">Message</label>
+    <textarea rows="5" cols="60" id="message" name="message"></textarea>
+    
+    <input type="submit" id="submit" value="Send Post Haste"/>
+    </fieldset>
 
-			<section id="ad2">
+</form>
 
-			</section>
-
-			<section id="ad3">
-
-			</section>
-			
-			<article>
-			<hgroup>
-			<h1>CSS Transitions - The State of Play</h1>
-			<h2>The future?</h2>
-			</hgroup>
-			
-			<p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
-			
-			<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
-			
-			<p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
-			
-			<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
-
-			</article>
-
-		</aside>
-
-	</div><!-- #main -->
-
-	<section id="contact">
-
-		<form id="contact-form" action="post">
-
-			<h1>Write a letter to our Editor</h1>
-
-			<fieldset>
-			<label for="name">Hello, my name is</label>
-			<input type="text" id="name">
-			
-			<label for="subject">The title of my letter is</label>
-			<input type="text" id="subject">
-
-			<label for="message">Message</label>
-			<textarea rows="5" cols="60" id="message"></textarea>
-			
-			<input type="submit" id="submit" value="Send Post Haste">
-
-			</fieldset>
-
-		</form>
-
-	</section><!-- #contact -->
-
-	<footer id="ft1">
-	<p>&copy; Sitepoint, 2011</p>
-
-	<p id="ft-logo"><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
-	</footer><!-- #ft1 -->
+<footer>
+    <p>&copy; Sitepoint, 2011</p>
+    <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
+</footer>
   <script src="js/hyphenator.js"></script>
 
 </body>
