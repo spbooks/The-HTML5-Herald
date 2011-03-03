@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Herald</title>
+  <link rel="stylesheet" href="css/styles.css?v=1.0"/>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+  <hgroup>
+    <h1><span>The </span><a href="/">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
+    <h2>Produced with That Good ol' Timey HTML5 &amp; CSS3</h2>
+  </hgroup>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Contact</a></li>
+    </ul>
+  </nav>
+  <p id="volume">Vol. MMXI</p>
+  <p id="issue"><time datetime="1904-06-04" pubdate>June 4, 1904</time></p>
+</header>
+<form id="contact" action="post">
+
+  <h1>Write a letter to our Editor</h1>
+
+  <fieldset>
+  <label for="name">Hello, my name is</label>
+  <input type="text" id="name" name="name"/>
+
+  <label for="subject">The title of my letter is</label>
+  <input type="text" id="subject" name="subject"/>
+
+  <label for="message">Message</label>
+  <textarea rows="5" cols="60" id="message" name="message"></textarea>
+
+  <input type="submit" id="submit" value="Send Post Haste"/>
+  </fieldset>
+
+</form>
+</body>
+</html>
