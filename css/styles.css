@@ -242,6 +242,7 @@ nav ul li a:hover, nav ul li a:active {
 #main + div, /* both selectors target the same element */
 #column-1   {
   width: 375px;	
+  padding-right: 4px;
 }
 #main > div:nth-of-type(2),/* both selectors target the same element */
 #column-2 {
@@ -250,7 +251,7 @@ nav ul li a:hover, nav ul li a:active {
 #main > div:last-of-type, /* both selectors target the same element */
 #column-3,
 aside {
-  width: 246px;
+  width: 244px;
   margin-right:0;
   padding-left: 4px;
 }
@@ -305,7 +306,7 @@ img[alt~=cat] {
   background: transparent url(../images/bg-subhead.gif) no-repeat bottom center;
 }
 
-#main > div h1 {
+#main h1 {
   font-size: 22px;
   margin: 0 0 8px 0;
 }
@@ -412,7 +413,7 @@ aside article .wanted {
   margin: 20px 5px;
 }
 
-aside > article:nth-of-type(2) {
+aside > article:nth-of-type(3) {
   background-image:url(../images/dukes.png);
   background-position: bottom left;
   -webkit-transition: transform  2s linear 250ms;
@@ -421,54 +422,53 @@ aside > article:nth-of-type(2) {
   transition: transform  2s linear 250ms;
 }
 
+#ad1 h1 {
+  font-family: Carnivalee;
+  letter-spacing: 0.1em;
+  font-size: 60px;
+}
 
-#ad2 h1 {
+
+#ad3 h1 {
   font-size: 30px;
   font-family: Carnivalee;	
   padding: 0 30px 0 75px;
   line-height:1;
   color: #999;
+  margin: 0 0 0 15px;
 }
-#ad2 h1 span {
+#ad3 h1 span {
   font-size: 40px;
-  color: #484848;
-  -webkit-transform:rotate(10deg) translateX(20px);
-  -moz-transform:rotate(10deg) translateX(20px);
-  -ms-transform:rotate(10deg) translateX(20px);
-  -o-transform:rotate(10deg) translateX(20px);
-  transform:rotate(10deg) translateX(20px);
+  
+  color: #999999;
   display:inline-block;
   -webkit-transition: transform 1s, color 2s;
 
 }
-#ad2:hover {
-  -webkit-transform: scale(1.2,1.2);
-  -moz-transform: scale(1.2,1.2);
-  -ms-transform: scale(1.2,1.2);
-  -o-transform: scale(1.2,1.2);
-  transform: scale(1.2,1.2);
+#ad3 h1:hover {
+
 }
-#ad2:hover h1 span {
-  -webkit-transform:rotate(0) translateX(0);
-  -moz-transform:rotate(0) translateX(0);
-  -ms-transform:rotate(0) translateX(0);
-  -o-transform:none;
-  transform:rotate(0) translateX(0);
-  color: #999999;
+#ad3 h1:hover span {
+  color: #484848;
+  -webkit-transform:rotate(10deg) translateX(20px);
+  -moz-transform:rotate(10deg) translateX(30px) scale(1.5,1.5);
+  -ms-transform:rotate(10deg) translateX(20px);
+  -o-transform:rotate(10deg) translateX(20px);
+  transform:rotate(10deg) translateX(20px);
 }
 
-#ad2 p {
+#ad3 p {
   padding: 5px 3px 0 75px;	
   font-size: 0.85em;
 }		
-/* Contact Form */
-#contact {
+/* Forms */
+form {
   border: solid 2px #888;
   border-width: 2px 0;
   clear: both;
   -webkit-box-shadow: 
     inset 1px 1px 84px rgba(0,0,0,0.24), 
-    inset -1px -1px 84px rgba(0,0,0,0.24);
+    inset -1px -1px 84px rgba(0,0,0,0.24); 
   -moz-box-shadow: 
     inset 1px 1px 84px rgba(0,0,0,0.24), 
     inset -1px -1px 84px rgba(0,0,0,0.24);
@@ -485,22 +485,33 @@ aside > article:nth-of-type(2) {
 }
 
 
-#contact label {
+label {
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
   font-size: 26px;
   display:block;
   margin: auto;
   text-align:center;
 }
-#contact input:not([type=submit]), textarea {
+input:not([type=submit]):not([type=checkbox]), textarea {
   background-color: transparent;
   border: dotted #484848;	
   border-width: 0 0 1px 0;
   display:block;
   margin: 20px auto 10px;
   font-style:italic;
+  display: block;
 }
-#contact input {
+
+input:not([type=submit]) {
+  width: 200px;
+}
+
+textarea {
+  width: 300px;
+  
+}
+
+input {
   text-align: center;
 }
 
@@ -515,24 +526,24 @@ input[type=submit] {
   background-image: -moz-radial-gradient(30% 120%, circle, 
     rgba(72,72,72,0.5) 0%, 
     rgba(72,72,72,1) 50%);
-  line-height: 80px;
   color: #fff;
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
   text-transform: uppercase;
   font-size: 28px;
   padding: 10px 30px;
   display: block;
-  margin: auto;
-  line-height: 72px;
+  margin: 30px auto 10px;
+  width: 200px;
 }
-#contact h1 {
+form h1 {
 
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 50px;
   font-family: Carnivalee;
   padding-bottom: 60px;
   text-align:center;
   white-space:nowrap;
+  text-transform: none;
   background: 
     url(../images/bg-formtitle-left.png) left 13px no-repeat, 
     url(../images/bg-formtitle-right.png) right 13px no-repeat;
@@ -546,7 +557,7 @@ body > footer {
   clear: both;
 }
 
-body > footer p {
+body > footer small {
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
   text-transform: uppercase;
   line-height: 32px;

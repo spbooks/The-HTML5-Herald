@@ -23,23 +23,70 @@
   <p id="volume">Vol. MMXI</p>
   <p id="issue"><time datetime="1904-06-04" pubdate>June 4, 1904</time></p>
 </header>
-<form id="contact" action="post">
 
-  <h1>Write a letter to our Editor</h1>
+  <form id="register" method="post">
+
+  <h1>Sign Me Up!</h1>
 
   <fieldset>
-  <label for="name">Hello, my name is</label>
-  <input type="text" id="name" name="name"/>
+  <label for="register-name">Hello, my name is</label>
+  <input type="text" id="register-name" name="name" required/>
 
-  <label for="subject">The title of my letter is</label>
-  <input type="text" id="subject" name="subject"/>
+  <label for="address">My address is</label>
+  <input type="text" id="address" name="address" required/>
 
-  <label for="message">Message</label>
-  <textarea rows="5" cols="60" id="message" name="message"></textarea>
 
-  <input type="submit" id="submit" value="Send Post Haste"/>
+  <input type="submit" id="register-submit" value="Send Post Haste"/>
   </fieldset>
 
 </form>
+    <form id="search" method="post">
+
+  <h1>Where'd I Put That Thing?</h1>
+
+  <fieldset>
+  <label for="search-field">Search far and wide</label>
+  <input type="search" id="search-field" name="search-field" required/>
+
+  <input type="submit" id="search-submit" value="Find it!"/>
+  </fieldset>
+
+</form>
+<form method="post" action="vacation_hold.php" id="vacation_hold">
+  <h1>Hold Yer Horses!</h1>
+  <h2>Hold my paper for a few days.</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text"  name="fullName" id="fullname" placeholder="Full Name" required />
+        <label for="vhEmail">Email Address:</label>
+        <input type="email"  id="vhEmail" name="email" placeholder="Account Holder's Email Address" />
+        <input type="checkbox"  value="yes"  id="rememberme"/> 
+        <label for="rememberme">Remember me on this computer</label>
+<p>To access your account, please provide the following:</p>
+
+        <label for="account">Account Number:</label>
+        <input type="text"  name="account" id="account" placeholder="Account Number" pattern="NB\d{8}-[0-3]" />
+
+    	<label for="phone">Phone Number</label>
+		<input type="tel"  name="phoneNumber" id="phone" placeholder="XXX-XXX-XXXX" pattern="[\(]?[0-9]{3}[-\.\) ]?[0-9]{3}[-\.\) ]?[0-9]{4}" />
+
+    	<label for="hn">House Number:</label>
+		<input type="text" id="hn" name="hn" />
+
+    	<label for="holdlength">How many days would you like us to hold your paper?</label>
+        <input type="number" min="7" max="70" placeholder="Minimum is 7 days" id="holdlength" name="holdlength" />
+
+     	<label for="startdate">Start holding the paper on:</label>
+        <input type="date" min="2011-12-24" max="2012-02-22" name="startdate" id="startdate" />
+
+     	<input type="submit" value="Place my paper on hold" />
+
+ </form>	
+
+
+  <footer>
+    <small>&copy; SitePoint </small>
+    <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
+</footer>
 </body>
 </html>
