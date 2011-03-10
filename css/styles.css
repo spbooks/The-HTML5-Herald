@@ -498,7 +498,7 @@ label {
 form p {
   text-align: center;
 }
-input:not([type=submit]):not([type=checkbox]), textarea {
+input[type=text], input[type=email], input[type=password], input[type=url], textarea {
   background-color: transparent;
   border: dotted #484848;	
   border-width: 0 0 1px 0;
@@ -509,20 +509,14 @@ input:not([type=submit]):not([type=checkbox]), textarea {
   padding: 5px 30px 5px 30px;
 }
 
-input:required {
-  border: 2px solid #FF0000;
-}
-input:focus:invalid { 
+input:not([type=date]):not([type=submit]):focus:invalid { 
   background: url('../images/invalid.png') no-repeat top right;
 } 
-input:focus:valid { 
+input:not([type=date]):not([type=submit]):focus:valid { 
   background: url('../images/valid.png') no-repeat top right;
 }
 :invalid {
   box-shadow: none;
-}
-input[required] {
-  border: 2px solid #FF0000;
 }
 
 input:not([type=submit]) {
