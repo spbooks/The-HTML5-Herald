@@ -550,13 +550,13 @@ input[type=submit] {
   border-radius: 5px;
   background-color: #333;
   background-image: -webkit-gradient(radial, 30% 120%, 0, 30% 120%, 100, 
-    color-stop(0,rgba(72,72,72,0.5)), 
+    color-stop(0,rgba(144,144,144,1)), 
     color-stop(1,rgba(72,72,72,1)));
   background-image: -moz-radial-gradient(30% 120%, circle, 
     rgba(144,144,144,1) 0%, 
     rgba(72,72,72,1) 50%);
   background-image: linear-gradient(30% 120%, circle,
-    rgba(72,72,72,0.5) 0%,
+    rgba(144,144,144, 1) 0%,
     rgba(72,72,72,1) 50%);
   color: #fff;
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
@@ -564,6 +564,15 @@ input[type=submit] {
   font-size: 28px;
   padding: 10px 30px;
   margin: 10px auto;
+  opacity: 0.8;
+   -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+ 
+}
+input[type=submit]:hover {
+  opacity: 1;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
 }
 form h1 {
 
