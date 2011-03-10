@@ -113,7 +113,6 @@ body {
   color: #666666;
   font-size: 13px;
   position: relative;
-  font-family: Times, "Times New Roman", serif;
 }
 
 
@@ -514,15 +513,6 @@ input:focus:valid {
 }
 :invalid {
   box-shadow: none;
-}
-input[required] {
-  border: 2px solid #FF0000;
-}
-input[required]:after {
-  content: "*";
-  color: #FF0000;
-  position: relative;
-  top: 0.2em;
 }
 
 

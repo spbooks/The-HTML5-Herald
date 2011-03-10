@@ -7,6 +7,7 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script src="js/modernizr-1.7.min.js"></script>
 </head>
 <body>
 <header>
@@ -33,7 +34,7 @@
   <input type="text" id="register-name" name="name" required/>
 
   <label for="address">My address is</label>
-  <input type="text" id="address" name="address" required/>
+  <input type="email" id="address" name="address" required/>
 
 
   <input type="submit" id="register-submit" value="Send Post Haste"/>
@@ -88,5 +89,40 @@
     <small>&copy; SitePoint </small>
     <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+if(!Modernizr.input.placeholder) {
+  $("input[placeholder], textarea[placeholder]").each(function(){
+    if($(this).val()==""){
+      $(this).val($(this).attr("placeholder"));
+      $(this).focus(function(){
+        if($(this).val()==$(this).attr("placeholder")) {
+              $(this).val("");
+              $(this).removeClass('placeholder');
+        }
+      });
+      $(this).blur(function(){
+        if($(this).val()==""){
+           $(this).val($(this).attr("placeholder"));
+           $(this).addClass('placeholder');
+        }
+       });
+    }
+  });
+
+  $('form').submit(function(){
+    // first do all the checking for required element and form validation. 
+    // Only remove placeholders before final submission
+    var placeheld = $(this).find('[placeholder]');
+    for(var i=0; i<placeheld.length; i++){
+    if(($( placeheld[i]).val()==$( placeheld[i]).attr('placeholder'))) {
+          // if not required, set value to empty before submitting
+          $( placeheld[i]).attr('value','');
+      }
+    }
+     
+  });
+}
+</script>
 </body>
 </html>
