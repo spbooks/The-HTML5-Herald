@@ -507,34 +507,24 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
   font-style:italic;
   font-family: Times, "Times New Roman", serif;
   padding: 5px 30px 5px 30px;
+  width: 50%;
 }
 
-input:not([type=date]):not([type=submit]):focus:invalid { 
+input:not([type=date]):not([type=submit]):not([type=checkbox]):focus:invalid { 
   background: url('../images/invalid.png') no-repeat top right;
 } 
-input:not([type=date]):not([type=submit]):focus:valid { 
+input:not([type=date]):not([type=submit]):not([type=checkbox]):focus:valid { 
   background: url('../images/valid.png') no-repeat top right;
 }
 :invalid {
   box-shadow: none;
 }
+::-webkit-input-placeholder { color:#333; }
 
-input:not([type=submit]) {
-  width: 50%;
-}
-
-textarea {
-  width: 300px;
-  
-}
 
 input {
   font-size: 20px;
   text-align: center;
-}
-
-form > span {
-  margin: 0 30px;
 }
 
 input[type=submit] {
