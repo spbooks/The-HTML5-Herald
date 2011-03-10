@@ -467,24 +467,24 @@ form {
   border: solid 2px #888;
   border-width: 2px 0;
   clear: both;
-  -webkit-box-shadow: 
-    inset 1px 1px 84px rgba(0,0,0,0.24), 
-    inset -1px -1px 84px rgba(0,0,0,0.24); 
   -moz-box-shadow: 
     inset 1px 1px 84px rgba(0,0,0,0.24), 
     inset -1px -1px 84px rgba(0,0,0,0.24);
-  box-shadow: 
-    inset 1px 1px 84px rgba(0,0,0,0.24), 
-    inset -1px -1px 84px rgba(0,0,0,0.24);	
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cacaca', endColorstr='#b1b1b1'); /* IE6,IE7 */
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cacaca', endColorstr='#b1b1b1')"; /* IE8+ */
 
   margin: 1px 0 1px 0;
+  text-align: center;
   padding: 20px;
   min-height: 300px;
   background: rgba(0,0,0,0.2) url(../images/bg-form.png) no-repeat bottom center;
 }
 
+form ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 label {
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
@@ -500,7 +500,7 @@ input:not([type=submit]):not([type=checkbox]), textarea {
   display:block;
   margin: 20px auto 10px;
   font-style:italic;
-  display: block;
+  font-family: Times, "Times New Roman", serif;
 }
 
 input:required {
@@ -528,6 +528,7 @@ input[required]:after {
 
 input:not([type=submit]) {
   width: 200px;
+k
 }
 
 textarea {
@@ -539,25 +540,30 @@ input {
   text-align: center;
 }
 
+form > span {
+  margin: 0 30px;
+}
+
 input[type=submit] {
   border: none;
   -moz-border-radius: 10%;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: #333;
   background-image: -webkit-gradient(radial, 30% 120%, 0, 30% 120%, 100, 
     color-stop(0,rgba(72,72,72,0.5)), 
     color-stop(1,rgba(72,72,72,1)));
   background-image: -moz-radial-gradient(30% 120%, circle, 
-    rgba(72,72,72,0.5) 0%, 
+    rgba(144,144,144,1) 0%, 
+    rgba(72,72,72,1) 50%);
+  background-image: linear-gradient(30% 120%, circle,
+    rgba(72,72,72,0.5) 0%,
     rgba(72,72,72,1) 50%);
   color: #fff;
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
   text-transform: uppercase;
   font-size: 28px;
   padding: 10px 30px;
-  display: block;
-  margin: 30px auto 10px;
-  width: 200px;
+  margin: 10px auto;
 }
 form h1 {
 
