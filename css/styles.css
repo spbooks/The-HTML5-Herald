@@ -484,6 +484,9 @@ form ul {
   margin: 0;
   padding: 0;
 }
+form ul li {
+  margin-bottom: 40px;
+}
 
 label {
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
@@ -491,6 +494,9 @@ label {
   display:block;
   margin: auto;
   text-align:center;
+}
+form p {
+  text-align: center;
 }
 input:not([type=submit]):not([type=checkbox]), textarea {
   background-color: transparent;

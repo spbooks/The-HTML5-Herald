@@ -4,9 +4,6 @@
   <meta charset="utf-8">
   <title>The HTML5 Herald</title>
   <link rel="stylesheet" href="css/styles.css?v=1.0"/>
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <script src="js/modernizr-1.7.min.js"></script>
 </head>
 <body>
@@ -18,7 +15,7 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Contact</a></li>
+      <li><a href="register.html">Sign Up</a></li>
     </ul>
   </nav>
   <p id="volume">Vol. MMXI</p>
@@ -33,70 +30,28 @@
 
   <ul>
     <li>
-      <label for="register-name">My name is</label>
+      <label for="register-name">My name is:</label>
       <input type="text" id="register-name" name="name" required>
     </li>
     <li>
-      <label for="address">My email address is</label>
+      <label for="address">My email address is:</label>
       <input type="email" id="address" name="address" required>
     </li>
     <li>
-      <label for="url">My website is located at</label>
+      <label for="url">My website is located at:</label>
       <input type="url" id="url" name="url" placeholder="http://example.com" required>
     </li>
-    <li>
+    <li> 
+      <label for="password">I would like my password to be:</label>
+      <p>(at least 6 characters, no spaces)</p>
+      <input type="password" id="password" name="password" required pattern="\S{6,}">
+    </li>
   </ul>
   <span>
   <input type="submit" id="register-submit" value="Send Post Haste"/>
   </span>
 </form>
-    <form id="search" method="post">
-
-  <h1>Where&lsquo;d I Put That Thing?</h1>
-
-  <fieldset>
-  <label for="search-field">Search far and wide</label>
-  <input type="search" id="search-field" name="search-field" required/>
-
-  <input type="submit" id="search-submit" value="Find it!"/>
-  </fieldset>
-
-</form>
-<form method="post" action="vacation_hold.php" id="vacation_hold">
-  <h1>Hold Yer Horses!</h1>
-  <h2>Hold my paper for a few days.</h2>
-
-        <label for="fullname">Full Name:</label>
-        <input type="text"  name="fullName" id="fullname" placeholder="Full Name" required />
-        <label for="vhEmail">Email Address:</label>
-        <input type="email"  id="vhEmail" name="email" placeholder="Account Holder's Email Address" />
-        <span>
-          <input type="checkbox"  value="yes"  id="rememberme"/> 
-          <label for="rememberme">Remember me on this computer</label>
-        </span>
-<p>To access your account, please provide the following:</p>
-
-        <label for="account">Account Number:</label>
-        <input type="text"  name="account" id="account" placeholder="Account Number" pattern="NB\d{8}-[0-3]" />
-
-    	<label for="phone">Phone Number</label>
-		<input type="tel"  name="phoneNumber" id="phone" placeholder="XXX-XXX-XXXX" pattern="[\(]?[0-9]{3}[-\.\) ]?[0-9]{3}[-\.\) ]?[0-9]{4}" />
-
-    	<label for="hn">House Number:</label>
-		<input type="text" id="hn" name="hn" />
-
-    	<label for="holdlength">How many days would you like us to hold your paper?</label>
-        <input type="number" min="7" max="70" placeholder="Minimum is 7 days" id="holdlength" name="holdlength" />
-
-     	<label for="startdate">Start holding the paper on:</label>
-        <input type="date" min="2011-12-24" max="2012-02-22" name="startdate" id="startdate" />
-
-     	<input type="submit" value="Place my paper on hold" />
-
- </form>	
-
-
-  <footer>
+    <footer>
     <small>&copy; SitePoint </small>
     <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
 </footer>
