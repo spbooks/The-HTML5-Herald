@@ -132,7 +132,6 @@ h2 {
 article h2 {
   background-image: url(../images/bg-header.gif);
 }
-:not(article) > hgroup h2, /* both selectors target same h2. */
 body > header h2 { 
   text-transform: lowercase;
   background-image: none;
@@ -498,19 +497,20 @@ input:not([type=submit]):not([type=checkbox]), textarea {
   border: dotted #484848;	
   border-width: 0 0 1px 0;
   display:block;
-  margin: 20px auto 10px;
+  margin: 10px auto 10px;
   font-style:italic;
   font-family: Times, "Times New Roman", serif;
+  padding: 5px 30px 5px 30px;
 }
 
 input:required {
   border: 2px solid #FF0000;
 }
 input:focus:invalid { 
-  border-bottom-color: #FF0000; 
+  background: url('../images/invalid.png') no-repeat top right;
 } 
 input:focus:valid { 
-  border-bottom-color: #00FF00; 
+  background: url('../images/valid.png') no-repeat top right;
 }
 :invalid {
   box-shadow: none;
@@ -518,17 +518,9 @@ input:focus:valid {
 input[required] {
   border: 2px solid #FF0000;
 }
-input[required]:after {
-  content: "*";
-  color: #FF0000;
-  position: relative;
-  top: 0.2em;
-}
-
 
 input:not([type=submit]) {
-  width: 200px;
-k
+  width: 50%;
 }
 
 textarea {
@@ -537,6 +529,7 @@ textarea {
 }
 
 input {
+  font-size: 20px;
   text-align: center;
 }
 
@@ -565,7 +558,7 @@ input[type=submit] {
   padding: 10px 30px;
   margin: 10px auto;
   opacity: 0.8;
-   -webkit-transition: opacity .25s linear;
+  -webkit-transition: opacity .25s linear;
   -moz-transition: opacity .25s linear;
  
 }
@@ -575,11 +568,9 @@ input[type=submit]:hover {
   -moz-transition: opacity .25s linear;
 }
 form h1 {
-
   margin: 0 auto;
   font-size: 50px;
   font-family: Carnivalee;
-  padding-bottom: 60px;
   text-align:center;
   white-space:nowrap;
   text-transform: none;
@@ -587,7 +578,13 @@ form h1 {
     url(../images/bg-formtitle-left.png) left 13px no-repeat, 
     url(../images/bg-formtitle-right.png) right 13px no-repeat;
 }
+form h2 {
+  font-size: 20px;
+}
 
+form hgroup {
+  padding-bottom: 50px;
+}
 /* Page Footer */
 body > footer {
   background: #d1d1d1;
