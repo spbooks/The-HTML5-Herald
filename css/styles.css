@@ -244,10 +244,12 @@ nav ul li a:hover, nav ul li a:active {
   width: 375px;	
   padding-right: 4px;
 }
-#main > div:nth-of-type(2),/* both selectors target the same element */
+
+#main > div:nth-of-type(2), /* both selectors target the same element */
 #column-2 {
   width: 130px;	
 }
+#column-2 { width: 130px; }
 #main > div:last-of-type, /* both selectors target the same element */
 #column-3,
 aside {
@@ -510,10 +512,14 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
   width: 50%;
 }
 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):focus:invalid { 
+input[type=number] {
+  width: 3em;
+}
+
+input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
   background: url('../images/invalid.png') no-repeat top right;
 } 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):focus:valid { 
+input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
   background: url('../images/valid.png') no-repeat top right;
 }
 :invalid {
