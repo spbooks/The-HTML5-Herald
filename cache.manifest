@@ -1,10 +1,9 @@
 CACHE MANIFEST
 
 index.html
-forms.html
+register.html
 
 js/hyphenator.js
-js/modernizr-1.7.js
 js/modernizr-1.7.min.js
 
 media/bamboo.mp4
