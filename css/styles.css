@@ -516,10 +516,10 @@ input[type=number] {
   width: 3em;
 }
 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
   background: url('../images/invalid.png') no-repeat top right;
 } 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
+input:not([type=range])not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
   background: url('../images/valid.png') no-repeat top right;
 }
 :invalid {
