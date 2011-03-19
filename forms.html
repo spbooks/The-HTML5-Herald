@@ -8,8 +8,16 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script src="js/modernizr-1.7.min.js"></script>
+  <script>
+  	function get_location(){
+		if (Modernizr.geolocation) {
+		 /*  navigator.geolocation.getCurrentPosition(findZipCode); */
+       }
+  	}	 
+   
+  </script>
 </head>
-<body>
+<body onLoad="get_location()">
 <header>
   <hgroup>
     <h1><span>The </span><a href="/">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
@@ -84,6 +92,12 @@
 
     	<label for="hn">House Number:</label>
 		<input type="text" id="hn" name="hn" />
+
+  <fieldset>
+    	<label for="zipcode">Zip/Postal Code:</label>
+		<input type="text" id="zipcode" name="zipcode" />
+  	    <input type="button" value="Zipcode-o-matic!" />
+  </fieldset>
 
     	<label for="holdlength">How many days would you like us to hold your paper?</label>
         <input type="number" min="7" max="70" placeholder="Minimum is 7 days" id="holdlength" name="holdlength" />

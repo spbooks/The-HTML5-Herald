@@ -7,9 +7,6 @@ js/hyphenator.js
 js/modernizr-1.7.js
 js/modernizr-1.7.min.js
 
-media/bamboo.mp4
-media/bamboo.ogv
-
 images/bg-bike.png
 images/bg-form.png
 images/bg-formtitle-left.png
@@ -39,4 +36,5 @@ fonts/carnevalee_freakshow-webfont.woff
 NETWORK
 *
 
-
+FALLBACK
+media/ images/video-still.png

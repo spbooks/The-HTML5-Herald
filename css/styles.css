@@ -512,6 +512,11 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
   width: 50%;
 }
 
+input#zipcode {
+	width:25%;
+	display:inline;
+	margin-right: 25px;
+}
 input[type=number] {
   width: 3em;
 }
@@ -533,7 +538,7 @@ input {
   text-align: center;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   border: none;
   -moz-border-radius: 10%;
   border-radius: 5px;
