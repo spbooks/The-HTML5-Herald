@@ -5,8 +5,9 @@
   <title>The HTML5 Herald</title>
   <link rel="stylesheet" href="css/styles.css?v=1.0"/>
   <script src="js/modernizr-1.7.min.js"></script>
+
 </head>
-<body>
+<body onLoad="loadStoredDetails()">
 <header>
   <hgroup>
     <h1><span>The </span><a href="index.html">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
@@ -27,6 +28,7 @@
     <h1>Sign Me Up!</h1>
     <h2>I would like to receive your fine publication.</h2>
   </hgroup>
+
 
   <ul>
     <li>
@@ -56,6 +58,12 @@
       <label for="upsell">Also sign me up for <cite>The CSS3 Chronicle</cite></label>
       <input id="upsell" name="upsell" type="checkbox">
     </li>
+	<li>
+		<span>
+          <label for="rememberme">Remember me on this computer</label>
+          <input type="checkbox"  value="yes"  id="rememberme" onClick="saveData()"/> 
+        </span>
+	</li>
   </ul>
   <input type="submit" id="register-submit" value="Send Post Haste"/>
 </form>
@@ -65,38 +73,40 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>
-if(!Modernizr.input.placeholder) {
-  $("input[placeholder], textarea[placeholder]").each(function(){
-    if($(this).val()==""){
-      $(this).val($(this).attr("placeholder"));
-      $(this).focus(function(){
-        if($(this).val()==$(this).attr("placeholder")) {
-              $(this).val("");
-              $(this).removeClass('placeholder');
-        }
-      });
-      $(this).blur(function(){
-        if($(this).val()==""){
-           $(this).val($(this).attr("placeholder"));
-           $(this).addClass('placeholder');
-        }
-       });
-    }
-  });
-
-  $('form').submit(function(){
-    // first do all the checking for required element and form validation. 
-    // Only remove placeholders before final submission
-    var placeheld = $(this).find('[placeholder]');
-    for(var i=0; i<placeheld.length; i++){
-    if(($( placeheld[i]).val()==$( placeheld[i]).attr('placeholder'))) {
-          // if not required, set value to empty before submitting
-          $( placeheld[i]).attr('value','');
-      }
-    }
-     
-  });
+if (!Modernizr.input.placeholder) {
+	$("input[placeholder], textarea[placeholder]").each(function(){
+		if ($(this).val() == "") {
+			$(this).val($(this).attr("placeholder"));
+			$(this).focus(function(){
+				if ($(this).val() == $(this).attr("placeholder")) {
+					$(this).val("");
+					$(this).removeClass('placeholder');
+				}
+			});
+			$(this).blur(function(){
+				if ($(this).val() == "") {
+					$(this).val($(this).attr("placeholder"));
+					$(this).addClass('placeholder');
+				}
+			});
+		}
+	});
+	
+	$('form').submit(function(){
+		// first do all the checking for required element and form validation. 
+		// Only remove placeholders before final submission
+		var placeheld = $(this).find('[placeholder]');
+		for (var i = 0; i < placeheld.length; i++) {
+			if (($(placeheld[i]).val() == $(placeheld[i]).attr('placeholder'))) {
+				// if not required, set value to empty before submitting
+				$(placeheld[i]).attr('value', '');
+			}
+		}
+		
+	});
 }
-</script>
+		</script>
+		<script type="text/javascript" src="js/rememberMe.js"></script>
+		<script type="text/javascript" src="js/zipcodeFinder.js"></script>
 </body>
 </html>
