@@ -4,8 +4,8 @@
 	function loadStoredDetails(){
 		if (Modernizr.localstorage) {
 			var name = localStorage.getItem("name");
-			var email = localStorage["email"];
-			var remember = localStorage["remember"];
+			var email = localStorage.getItem("email");
+			var remember = localStorage.getItem("remember");
 			
 			if (name) {
 				$("#register-name").val(name);
@@ -18,7 +18,6 @@
 			if (remember =="true")
 			{
 				$("#rememberme").attr("checked", "checked");
-
 			}
 		}
 		else {
@@ -36,9 +35,9 @@
 				var email = $("#address").val();
 				var name = $("#register-name").val();
 				
-				localStorage["name"] = name;
-				localStorage["email"] = email;
-				localStorage["remember"] = "true";
+				localStorage.setItem("name", name);
+				localStorage.setItem("email", email);
+				localStorage.setItem("remember", "true");
 			}
 		}
 		else {
