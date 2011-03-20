@@ -462,7 +462,22 @@ aside > article:nth-of-type(3) {
 #ad3 p {
   padding: 5px 3px 0 75px;	
   font-size: 0.85em;
-}		
+}
+
+#ad4 h1
+{
+	font-size: 30px;
+   font-family: Carnivalee;	
+}	
+
+#mapDiv
+{
+	height: 140px;
+	width: 236px;
+	margin: 0px auto;
+}
+	
+	
 /* Forms */
 form {
   border: solid 2px #888;
@@ -563,6 +578,9 @@ input[type=submit], input[type=button] {
   -moz-transition: opacity .25s linear;
  
 }
+
+
+
 input[type=submit]:hover {
   opacity: 1;
   -webkit-transition: opacity .25s linear;
