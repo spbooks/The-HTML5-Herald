@@ -468,14 +468,24 @@ aside > article:nth-of-type(3) {
 {
 	font-size: 30px;
    font-family: Carnivalee;	
+	text-align:center;
 }	
+
+#ad4
+{
+	position:relative;
+}
 
 #mapDiv
 {
+	position: absolute;
+	top:0px;
+	left:0px;
 	height: 140px;
 	width: 236px;
-	margin: 0px auto;
 }
+
+
 	
 	
 /* Forms */
@@ -494,6 +504,17 @@ form {
   padding: 20px;
   min-height: 300px;
   background: rgba(0,0,0,0.2) url(../images/bg-form.png) no-repeat bottom center;
+}
+
+form#geoForm
+{
+	padding: 0px;
+	border:none;
+	min-height:0px;
+	background:none;
+	filter: none;
+	-ms-filter:none;
+	-moz-box-shadow: none;
 }
 
 form ul {
