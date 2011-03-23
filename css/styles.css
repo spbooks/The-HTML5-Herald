@@ -497,20 +497,17 @@ aside > article:nth-of-type(3) {
 #ad4 h1
 {
 	font-size: 30px;
-   font-family: Carnivalee;	
+    font-family: Carnivalee;	
 	text-align:center;
 }	
 
 #ad4
 {
-	position:relative;
+	height:140px;
 }
 
 #mapDiv
 {
-	position: absolute;
-	top:0px;
-	left:0px;
 	height: 140px;
 	width: 236px;
 }
@@ -587,18 +584,18 @@ input[type=number] {
   width: 3em;
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]) {
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]) {
   background: transparent no-repeat top right;
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):required {
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):required {
   background-image: url('../images/required.png'); 
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):focus:invalid { 
   background-image: url('../images/invalid.png');
 } 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):focus:valid { 
   background-image: url('../images/valid.png');
 }
 
