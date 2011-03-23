@@ -1,8 +1,13 @@
 CACHE MANIFEST
 
+CACHE:
 index.html
+<<<<<<< HEAD
+forms.html
+=======
 register.html
 
+>>>>>>> upstream/master
 js/hyphenator.js
 js/modernizr-1.7.min.js
 images/bg-bike.png

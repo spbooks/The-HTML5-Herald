@@ -1,6 +1,6 @@
 
 body { font:13px serif; *font-size:small; *font:x-small; line-height:1.22; }
-html, body, div, span, object, iframe,
+html, body, body div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -10,7 +10,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, figure, footer, header, 
-hgroup, menu, nav, section, menu,
+hgroup, menu, nav, section,
 time, mark, audio, video, a {
   margin:0;
   padding:0;
@@ -23,7 +23,6 @@ time, mark, audio, video, a {
   font-weight: normal;
 }
 
-
 article, aside, figure, footer, header, hgroup, nav, section { display:block; }
 
 nav ul { list-style:none; }
@@ -34,7 +33,6 @@ blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 
-mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 del { text-decoration: line-through; }
 abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
 table { border-collapse:collapse; border-spacing:0;  font-size:inherit; font:100%;}
@@ -43,10 +41,9 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }/
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 html { -webkit-font-smoothing: antialiased; }
 
-
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a: active { outline: none; }
-a:focus { outline: 1px dotted #f3f3f3; }
+a:focus { outline: 1px dotted #000000; }
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
 
@@ -54,7 +51,6 @@ small { font-size:85%; }
 strong{ font-weight: bold; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
-
 
 input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
@@ -66,13 +62,6 @@ a:link { -webkit-tap-highlight-color: #ccc; }
 html { overflow-y: scroll; }
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
-
-.ir { display:inline-block; text-indent:-999em; overflow:hidden;}
-.hidden, .hide { display:none; visibility:hidden; } 
-.visuallyhidden { position:absolute;    
-                  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-                  clip: rect(1px, 1px, 1px, 1px); } /* ACCESSIBLE HIDING */
-
 
 /* RESET STYLES END HERE */
 
@@ -97,6 +86,19 @@ button {  width: auto; overflow: visible; }
     url('../fonts/carnevalee_freakshow-webfont.svg#webfont6dNgdi4w') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'AcknowledgementMedium';
+    src: url('../fonts/Acknowledgement-webfont.eot');
+    src: url('../fonts/Acknowledgement-webfont.eot?iefix') format('eot'),
+         url('../fonts/Acknowledgement-webfont.woff') format('woff'),
+         url('../fonts/Acknowledgement-webfont.ttf') format('truetype'),
+         url('../fonts/Acknowledgement-webfont.svg#webfontuCYqM11k') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 html {
@@ -354,24 +356,7 @@ aside article {
   border: 1px solid #cccccc;
   margin-bottom: 5px;
 }
-aside article .wanted {
-  font-family: LeagueGothic, 'Arial Narrow',arial, sans-serif;
-  font-weight: normal;
-  color: #ffffff; 
-  background-color: #484848 /* url(images/grainy.png) 0 0 repeat*/; 
-  text-align: center;
-  font-size: 28px;
-  line-height: 65px;
-  margin: 0 5px;
-  -webkit-box-shadow: 2px 5px #ffffff;
-  -moz-box-shadow: 2px 5px #ffffff;
-  box-shadow: 2px 5px #ffffff;
-  filter: shadow(color=#FFFFFF, direction=220, Strength=8);
-  /*filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=5, Color='white', Positive='true'); */
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-}
+
 
 .module {
   height: 170px;
@@ -409,7 +394,7 @@ aside article .wanted {
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 1px #FFFFFF;
-  font-family:Arial Narrow, Helvetica, sans-serif;
+  font-family: LeagueGothic, Arial Narrow, Helvetica, sans-serif;
   font-size: 26px;
   letter-spacing:-1px;
   margin: 20px 5px;
@@ -425,9 +410,54 @@ aside > article:nth-of-type(3) {
 }
 
 #ad1 h1 {
-  font-family: Carnivalee;
+  font-family: AcknowledgementMedium;
   letter-spacing: 0.1em;
-  font-size: 60px;
+  font-size: 36px;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+#ad1 h1:first-letter {
+  letter-spacing: -0.1em;
+}
+
+#ad1 p {
+  margin: 0;
+  font-family: AcknowledgementMedium;
+  font-size: 14px;
+  text-align: center;
+}
+
+#ad1 a.wanted {
+  display: block;
+  text-decoration: none;
+  font-family: Carnivalee;
+  font-weight: normal;
+  border: 5px double;
+  color: #ffffff; 
+  background-color: #484848 /* url(images/grainy.png) 0 0 repeat*/; 
+  text-align: center;
+  font-size: 28px;
+  margin: 5px 5px 9px 5px;
+  padding: 15px 0;
+  -webkit-box-shadow: 2px 5px #484848;
+  -moz-box-shadow: 2px 5px #484848;
+  box-shadow: 2px 5px #484848;  
+  filter: shadow(color=#FFFFFF, direction=220, Strength=8);
+  /*filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=5, Color='white', Positive='true'); */
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  position: relative;
+
+}
+
+#ad1 a.wanted:hover {
+  -webkit-box-shadow: 4px 10px #484848;
+  -moz-box-shadow: 4px 10px #484848;
+  box-shadow: 4px 10px #484848;  
+  top:-5px;
+  left: -2px;
 }
 
 
@@ -557,15 +587,25 @@ input[type=number] {
   width: 3em;
 }
 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
-  background: url('../images/invalid.png') no-repeat top right;
-} 
-input:not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
-  background: url('../images/valid.png') no-repeat top right;
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]) {
+  background: transparent no-repeat top right;
 }
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):required {
+  background-image: url('../images/required.png'); 
+}
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
+  background-image: url('../images/invalid.png');
+} 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
+  background-image: url('../images/valid.png');
+}
+
 :invalid {
   box-shadow: none;
 }
+
 ::-webkit-input-placeholder { color:#333; }
 
 
