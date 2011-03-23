@@ -43,7 +43,7 @@ html { -webkit-font-smoothing: antialiased; }
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a: active { outline: none; }
-a:focus { outline: 1px dotted #000000; }
+a:focus { outline: 1px dotted #f3f3f3; }
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
 
@@ -76,18 +76,6 @@ button {  width: auto; overflow: visible; }
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'Carnivalee';
-  src: url('../fonts/carnevalee_freakshow-webfont.eot?') format('eot');
-  src: local('☺'),
-    url('../fonts/carnevalee_freakshow-webfont.woff') format('woff'),
-    url('../fonts/carnevalee_freakshow-webfont.ttf') format('truetype'),
-    url('../fonts/carnevalee_freakshow-webfont.svg#webfont6dNgdi4w') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 @font-face {
     font-family: 'AcknowledgementMedium';
@@ -239,9 +227,8 @@ nav ul li a:hover, nav ul li a:active {
 }
 #main > div {
   float: left;
-  overflow:hidden;	
 }
-#main + div, /* both selectors target the same element */
+#main > div:first-of-type, /* both selectors target the same element */
 #column-1   {
   width: 375px;	
   padding-right: 4px;
@@ -251,7 +238,7 @@ nav ul li a:hover, nav ul li a:active {
 #column-2 {
   width: 130px;	
 }
-#column-2 { width: 130px; }
+
 #main > div:last-of-type, /* both selectors target the same element */
 #column-3,
 aside {
@@ -366,7 +353,7 @@ aside article {
   background-image:
     url(../images/bg-bike.png), 
     -webkit-gradient(linear, 
-    from(rgba(0,0,0,0.6)), 
+    from(rgba(0,0,0,0.4)), 
     color-stop(37%, rgba(0,0,0,0)),
     color-stop(83%, rgba(0,0,0,0)), 
     color-stop(92%, rgba(0,0,0,0.16)), 
@@ -374,28 +361,46 @@ aside article {
   background-image:
     url(../images/bg-bike.png),
     -moz-linear-gradient(0% 0% 270deg,
-    rgba(0,0,0,0.6) 0, 
+    rgba(0,0,0,0.4) 0, 
     rgba(0,0,0,0) 37%,
     rgba(0,0,0,0) 83%, 
-    rgba(0,0,0,0.16) 92%, 
+    rgba(0,0,0,0.06) 92%, 
     rgba(0,0,0,0) 98%);
   background-image:
     url(../images/bg-bike.png),
     -webkit-linear-gradient(top,
-    rgba(0,0,0,0.6) 0, 
+    rgba(0,0,0,0.4) 0, 
     rgba(0,0,0,0) 37%,
     rgba(0,0,0,0) 83%, 
-    rgba(0,0,0,0.16) 92%, 
+    rgba(0,0,0,0.06) 92%, 
     rgba(0,0,0,0) 98%);
   background-position: 50% 88%, 0 0;
+    -webkit-transition: background-position  1s linear 250ms;
+  -moz-transition: background-position  1s linear 250ms;
+  -o-transition: background-position  1s linear 250ms;
+  transition: background-position  1s linear 250ms;
 }
-.module  h1 {
+
+#ad2 a {
+  font-family: LeagueGothic, Arial Narrow, Arial, sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 5px;
+  text-shadow: #fff 1px 1px;
+}
+
+.module:hover {
+  background-position: 150% 88%, 0 0;
+}
+#ad2  h1 {
   color: #484848;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 1px #FFFFFF;
   font-family: LeagueGothic, Arial Narrow, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 42px;
   letter-spacing:-1px;
   margin: 20px 5px;
 }
@@ -428,26 +433,23 @@ aside > article:nth-of-type(3) {
   text-align: center;
 }
 
-#ad1 a.wanted {
+aside p + a {
   display: block;
   text-decoration: none;
-  font-family: Carnivalee;
-  font-weight: normal;
+  font-family: AcknowledgementMedium;
   border: 5px double;
   color: #ffffff; 
-  background-color: #484848 /* url(images/grainy.png) 0 0 repeat*/; 
+  background-color: #484848; 
   text-align: center;
   font-size: 28px;
   margin: 5px 5px 9px 5px;
   padding: 15px 0;
   -webkit-box-shadow: 2px 5px #484848;
   -moz-box-shadow: 2px 5px #484848;
-  box-shadow: 2px 5px #484848;  
-  filter: shadow(color=#FFFFFF, direction=220, Strength=8);
-  /*filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=5, Color='white', Positive='true'); */
+  box-shadow: 2px 5px #484848;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   position: relative;
 
 }
@@ -456,25 +458,33 @@ aside > article:nth-of-type(3) {
   -webkit-box-shadow: 4px 10px #484848;
   -moz-box-shadow: 4px 10px #484848;
   box-shadow: 4px 10px #484848;  
-  top:-5px;
+  top: -5px;
   left: -2px;
 }
 
 
 #ad3 h1 {
-  font-size: 30px;
-  font-family: Carnivalee;	
+  font-size: 20px;
+  font-family: AcknowledgementMedium;	
   padding: 0 30px 0 75px;
   line-height:1;
   color: #999;
   margin: 0 0 0 15px;
 }
 #ad3 h1 span {
-  font-size: 40px;
+  font-size: 30px;
   
   color: #999999;
   display:inline-block;
-  -webkit-transition: transform 1s, color 2s;
+	/* Firefox */
+	-moz-transition: all 0.3s ease;
+	/* WebKit */
+	-webkit-transition: all 0.3s ease;
+	/* Opera */
+	-o-transition: all 0.3s ease;
+	/* Standard */
+	transition: all 0.3s ease;
+
 
 }
 #ad3 h1:hover {
@@ -482,11 +492,11 @@ aside > article:nth-of-type(3) {
 }
 #ad3 h1:hover span {
   color: #484848;
-  -webkit-transform:rotate(10deg) translateX(20px);
-  -moz-transform:rotate(10deg) translateX(30px) scale(1.5,1.5);
-  -ms-transform:rotate(10deg) translateX(20px);
-  -o-transform:rotate(10deg) translateX(20px);
-  transform:rotate(10deg) translateX(20px);
+  -webkit-transform:rotate(10deg) translateX(40px) scale(1.5,1.5));
+  -moz-transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
+  -ms-transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
+  -o-transform:rotate(10deg)translateX(40px) scale(1.5,1.5);
+  transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
 }
 
 #ad3 p {
@@ -606,7 +616,7 @@ input[type=submit]:hover {
 form h1 {
   margin: 0 auto;
   font-size: 50px;
-  font-family: Carnivalee;
+  font-family: AcknowledgementMedium;
   text-align:center;
   white-space:nowrap;
   text-transform: none;
