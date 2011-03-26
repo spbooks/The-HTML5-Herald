@@ -290,6 +290,22 @@ aside {
   clear:both;
 }
 
+#ac1
+{
+	position:relative;
+	margin-bottom: 25px;
+}
+#canvasOverlay
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	/* to avoid seeing the video in color for a second before the JavaScript runs 
+	 * show a black background instead*/
+	background-color: black;
+	margin-bottom:25px;
+	
+}
 
 #column-2 article{
   padding: 0 4px 0 4px;
@@ -504,6 +520,8 @@ aside > article:nth-of-type(3) {
 #ad4
 {
 	height:140px;
+	position:relative;
+
 }
 
 #mapDiv
