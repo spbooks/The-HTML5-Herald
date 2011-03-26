@@ -33,7 +33,7 @@
     <article id="ac1">
      <div id="video-container">
 
-		<video width="373" height="280" autobuffer="autobuffer" id="video" poster="images/poster.jpg">
+		<video width="373" height="280" autobuffer="autobuffer" id="video" poster="images/video-still.png" controls>
 			<!-- MP4 must be first for iPad! -->
 			<source src="media/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
 			<source src="media/ford-plane-takes-off.mp4" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
@@ -50,7 +50,7 @@
 		</video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
 
-		<div id="controls">
+		<div id="controls" class="displaynone">
 			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
 			<div id="timer">00:00</div>
 			<div id="muteUnmute" class="unmuted" tabindex="2">Mute/Unmute</div>

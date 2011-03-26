@@ -9,8 +9,8 @@ $(function () {
 	
 	// The if statement below works in all browsers locally; The "canplaythrough" listener works in all except Firefox.
 	if (videoEl.readyState === 4) {
-		//videoEl.removeAttribute("controls");
-		//vidControls.removeClass("displaynone");
+		videoEl.removeAttribute("controls");
+		vidControls.removeClass("displaynone");
 	}
 
 	videoEl.addEventListener('canplaythrough', function () {

@@ -24,6 +24,9 @@
     transition: opacity .7s linear;
 }
 
+	.displaynone {
+		display: none;
+	}
 
 #controls:hover {
     opacity: 1;
