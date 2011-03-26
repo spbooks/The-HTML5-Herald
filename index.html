@@ -146,10 +146,11 @@
 
 	<article id="ad4">
       <div id="mapDiv">      	
-      	<h1>Where in the world are you?</h1>
+      	<h1 id="geoHeading">Where in the world are you?</h1>
 		<form id="geoForm">
 			<input type="button" id="geobutton" value="Tell us!" onclick="determineLocation()" >
 		</form>		
+		<div id="spinner"></div>
       </div>	  
 
 
@@ -182,6 +183,7 @@
 </footer>
 <script src="js/hyphenator.js"></script>
 <script src="js/geoExample.js"></script>
+<script src="js/raphael-min.js"></script>
 
 <!-- jQuery version might not be the latest; check jquery.com -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>

@@ -1,9 +1,34 @@
 /**
  * @author alexisgoldstein
  */
+	
+
 function determineLocation(){
     if (Modernizr.geolocation) {
         navigator.geolocation.getCurrentPosition(displayOnMap);
+
+		var container = Raphael(document.getElementById("spinner"), 125, 125);
+					
+        var Spinner = (function(){
+					// shrinking images down by changing width and height here works fine in webkit, but looks 
+					// distorted in FF/O. scale down the image first in inkscape!
+            var spinner = container.image("images/spinnerEvenSm.svg", 0, 0, 100, 100);
+            return {
+                start: function(){
+                    spinner.animate({
+                        rotation: "720"
+                    }, 60000);
+                },
+                stop: function(){
+                    spinner.stop();
+                }
+            }
+        })();
+        
+        Spinner.start();
+		// hide the heading and the button
+		//document.getElementById("geoHeading").style.visibility = "hidden";
+		//document.getElementById("geobutton").style.visibility = "hidden";
     }
     else {
         // geolocation is not supported in this browser
@@ -12,6 +37,8 @@ function determineLocation(){
 }
 
 function displayOnMap(position){
+	//Spinner.stop();
+	document.getElementById("spinner").style.visibility = "hidden";
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
     
@@ -32,4 +59,9 @@ function displayOnMap(position){
     });
     
     map.setCenter(initialLocation);
+    
+    
 }
+
+
+
