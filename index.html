@@ -34,10 +34,10 @@
      <div id="video-container">
 
 		<video width="373" height="280" autobuffer="autobuffer" id="video" poster="images/video-still.png" controls>
-			<!-- MP4 must be first for iPad! -->
+        <!-- MP4 must be first for iPad! -->
 			<source src="media/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
 			<source src="media/ford-plane-takes-off.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
-			<!-- fallback to Flash: -->
+        <!-- fallback to Flash: -->
 			<object width="373" height="280" type="application/x-shockwave-flash" data="http://player.longtailvideo.com/player.swf">
 				<!-- Firefox uses the 'data' attribute above, IE/Safari uses the param below -->
 				<param name="movie" value="http://player.longtailvideo.com/player.swf" />
@@ -47,9 +47,9 @@
 				<!-- fallback image. note the title field below, put the title of the video there -->
 				<img src="images/video-still.png" width="373" height="280" alt="Airplane" title="No video playback capabilities, please download the video below">
 			</object>
-		</video>
+      </video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
-
+            
 		<div id="controls" class="displaynone">
 			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
 			<div id="timer">00:00</div>
@@ -125,24 +125,24 @@
   </div>
         
   <div id="column-3">	
-      <aside>
+    <aside>
 
-    <article id="ad1">
-      <h1>Wanted</h1>
-      <p>For being totally awesome!</p>
-      <a href="#" class="wanted">&lt;HTML5&gt; &amp; {CSS3}</a>
-      <p>Reward: Happiness and satisfaction</p>
-    </article>
-        
-    <article id="ad2"  class="module">
-      <h1>HTML5 and CSS3 <br/>Now in Book Form!</h1>
-    </article>
-        
-    <article id="ad3">
-      <h1>Put your <span>dukes</span> up sire</h1>
-      <p>It's time for a good old thrashing.<br>
-      I will rotate your mustache OFF!</p>
-    </article>
+      <article id="ad1">
+        <h1>Wanted</h1>
+        <p>For being totally awesome!</p>
+        <a href="http://sitepoint.com/books/htmlcss1/" class="wanted">&lt;HTML5&gt; &amp; {CSS3}</a>
+        <p>Reward: Happiness and satisfaction</p>
+      </article>
+          
+      <article id="ad2"  class="module">
+        <h1>HTML5 and CSS3 <br/>Now in Book Form!</h1>
+      </article>
+          
+      <article id="ad3">
+        <h1>Put your <span>dukes</span> up sire</h1>
+        <p>It&rsquo;s time for a good old thrashing.<br>
+        I will rotate your moustache OFF!</p>
+      </article>
 
 	<article id="ad4">
       <div id="mapDiv">      	
@@ -156,7 +156,7 @@
 
 	  
     </article>
-  </aside>
+    </aside>
     <article id="ac5">
       <hgroup>
         <h1>CSS Transitions - The State of Play</h1>

@@ -4,10 +4,10 @@
 <title>Module Gradient</title>
  <defs> 
   <linearGradient id="grad"  x1="0" y1="0" x2="0" y2="100%">
-    <stop offset="0" stop-opacity="0.6" color-stop="#000000" />
+    <stop offset="0" stop-opacity="0.3" color-stop="#000000" />
     <stop offset="0.37" stop-opacity="0" stop-color="#000000" />
     <stop offset="0.83" stop-opacity="0" stop-color="#000000" />
-    <stop offset="0.92" stop-opacity="0.16" stop-color="#000000" />
+    <stop offset="0.92" stop-opacity="0.06" stop-color="#000000" />
     <stop offset="0.98" stop-opacity="0" stop-color="#000000" />
   </linearGradient>
 </defs>
