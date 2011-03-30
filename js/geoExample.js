@@ -3,24 +3,9 @@ function determineLocation(){
         navigator.geolocation.getCurrentPosition(displayOnMap);
 
 		var container = Raphael(document.getElementById("spinner"), 125, 125);
-					
-        var Spinner = (function(){
-					// shrinking images down by changing width and height here works fine in webkit, but looks 
-					// distorted in FF/O. scale down the image first in inkscape!
-            var spinner = container.image("images/spinnerBW.png", 0, 0, 100, 100);
-            return {
-                start: function(){
-                    spinner.animate({
-                        rotation: "720"
-                    }, 60000);
-                },
-                stop: function(){
-                    spinner.stop();
-                }
-            }
-        })();
-        
-        Spinner.start();
+        var spinner = container.image("images/spinnerBW.png", 0, 0, 100, 100);
+        var attrsToAnimate = { rotation: "720" }; 
+		spinner.animate(attrsToAnimate, 60000);        
     }
     else {
         // geolocation is not supported in this browser
