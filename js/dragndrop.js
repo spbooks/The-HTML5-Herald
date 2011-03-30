@@ -5,8 +5,6 @@ function dragSetup(event)
 
 function dragOver(event)
 {
-	var catElement = document.getElementById(event.dataTransfer.getData("text/plain"));
-    console.log("in drag over" + catElement);
     event.preventDefault();
 }
 
@@ -17,9 +15,6 @@ function itemDropped(event)
 	mouseHash['mouse1'] = "NOMNOMNOM";
 	mouseHash['mouse2'] = "MEOW!";
 	mouseHash['mouse3'] = "Purr...";
-
-    var item = event.dataTransfer.getData("text/plain");
-	console.log("item is " + item);
 
 	var nearestCatH2;
 
@@ -34,7 +29,13 @@ function itemDropped(event)
 	}
 
 	// change text of the appropriate h1 (depending on which cat we dropped a treat on)
+    var item = event.dataTransfer.getData("text/plain");
 	nearestCatH2.innerHTML = mouseHash[item];	
+	
+	// get the img element for the mouse, and then remove it
+	var mousey = document.getElementById(item);
+    mousey.parentNode.removeChild(mousey);
+	
 	event.preventDefault();
 	
 }
