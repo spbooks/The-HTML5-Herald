@@ -38,7 +38,7 @@ function drawOneFrame(video, context, canvas)
         var blue = pixelData[i + 2];
         //we'll ignore the alpha value, which is in position i+3
         
-        var greyscale = red * 0.2989 + green * 0.587 + blue * 0.114;
+		var greyscale = red * 0.3 + green * 0.59 + blue * 0.11;
         
         pixelData[i] = greyscale;
         pixelData[i + 1] = greyscale;
