@@ -12,7 +12,7 @@ function determineLocation(){
         var Spinner = (function(){
 					// shrinking images down by changing width and height here works fine in webkit, but looks 
 					// distorted in FF/O. scale down the image first in inkscape!
-            var spinner = container.image("images/spinnerEvenSm.svg", 0, 0, 100, 100);
+            var spinner = container.image("images/spinner.svg", 0, 0, 100, 100);
             return {
                 start: function(){
                     spinner.animate({

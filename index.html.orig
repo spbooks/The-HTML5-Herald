@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>The HTML5 Herald</title>
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.0"/>
   <link rel="stylesheet" href="css/screen.css?v=1.0">
 
   <!--[if lt IE 9]>
@@ -34,22 +34,22 @@
      <div id="video-container">
 
 		<video width="373" height="280" autobuffer="autobuffer" id="video" poster="images/video-still.png" controls>
-        <!-- MP4 must be first for iPad! -->
+			<!-- MP4 must be first for iPad! -->
 			<source src="media/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
 			<source src="media/ford-plane-takes-off.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
-        <!-- fallback to Flash: -->
+			<!-- fallback to Flash: -->
 			<object width="373" height="280" type="application/x-shockwave-flash" data="http://player.longtailvideo.com/player.swf">
 				<!-- Firefox uses the 'data' attribute above, IE/Safari uses the param below -->
-				<param name="movie" value="http://player.longtailvideo.com/player.swf" >
-				<param name="allowFullScreen" value="true" >
-				<param name="wmode" value="transparent" >
+				<param name="movie" value="http://player.longtailvideo.com/player.swf" />
+				<param name="allowFullScreen" value="true" />
+				<param name="wmode" value="transparent" />
 				<param name="flashvars" value="controlbar=over&amp;image=images/poster.jpg&amp;file=media/media/ford-plane-takes-off.mp4">
 				<!-- fallback image. note the title field below, put the title of the video there -->
 				<img src="images/video-still.png" width="373" height="280" alt="Airplane" title="No video playback capabilities, please download the video below">
 			</object>
-      </video>
+		</video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
-            
+
 		<div id="controls" class="displaynone">
 			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
 			<div id="timer">00:00</div>
@@ -98,17 +98,12 @@
     <article id="ac3">
       <hgroup>
         <h1>Wai-Aria? HAHA!</h1>
-        <h2 id="cat1Heading">Form Accessibility</h2>
+        <h2>Form Accessibility</h2>
       </hgroup>
             
-      <img src="images/cat.png" id="cat1" alt="WAI-ARIA Cat" ondragover="dragOver(event)" ondrop="itemDropped(event)">
+      <img src="images/cat.png" alt="WAI-ARIA Cat"/>
             
       <div class="content">
-      <p style="text-align:center">
-          <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse1" draggable="true" ondragstart="dragSetup(event);">
-		  <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse2" draggable="true" ondragstart="dragSetup(event);">
-		  <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse3" draggable="true" ondragstart="dragSetup(event);">
-      </p>
         <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
         <p>Nam vestibulum, arcu sodales feugiat.</p>
       </div>
@@ -117,10 +112,10 @@
     <article id="ac4">
       <hgroup>
         <h1>Wai-Aria? HAHA!</h1>
-        <h2 id="cat2Heading">Form Accessibility</h2>
+        <h2>Form Accessibility</h2>
       </hgroup>
             
-      <img src="images/cat.png" id="cat2" alt="WAI-ARIA Cat" ondragover="dragOver(event)" ondrop="itemDropped(event)">
+      <img src="images/cat.png" alt="WAI-ARIA Cat"/>
             
       <div class="content">
         <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
@@ -140,7 +135,7 @@
       </article>
           
       <article id="ad2"  class="module">
-        <h1>HTML5 and CSS3 <br>Now in Book Form!</h1>
+        <h1>HTML5 and CSS3 <br/>Now in Book Form!</h1>
       </article>
           
       <article id="ad3">
@@ -149,6 +144,7 @@
         I will rotate your moustache OFF!</p>
       </article>
 
+<<<<<<< HEAD
 	<article id="ad4">
       <div id="mapDiv">      	
       	<h1 id="geoHeading">Where in the world are you?</h1>
@@ -161,7 +157,10 @@
 
 	  
     </article>
+  </aside>
+=======
     </aside>
+>>>>>>> upstream/master
     <article id="ac5">
       <hgroup>
         <h1>CSS Transitions - The State of Play</h1>
@@ -195,7 +194,6 @@
 <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
 
 <script src="js/general.js"></script>
-<script src="js/dragndrop.js"></script>
 
 <!-- google maps API -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
