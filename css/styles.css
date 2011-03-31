@@ -345,19 +345,12 @@ aside article {
 }
 
 
-.module {
+#ad2 {
   height: 170px;
   background-image:
     url(../images/bg-bike.png), 
     url(../images/module.svg);
-  background-image:
-    url(../images/bg-bike.png), 
-    -webkit-gradient(linear, 
-    from(rgba(0,0,0,0.4)), 
-    color-stop(37%, rgba(0,0,0,0)),
-    color-stop(83%, rgba(0,0,0,0)), 
-    color-stop(92%, rgba(0,0,0,0.16)), 
-    color-stop(98%, rgba(0,0,0,0)));
+  /* Mozilla gradient syntax */
   background-image:
     url(../images/bg-bike.png),
     -moz-linear-gradient(0% 0% 270deg,
@@ -366,6 +359,7 @@ aside article {
     rgba(0,0,0,0) 83%, 
     rgba(0,0,0,0.06) 92%, 
     rgba(0,0,0,0) 98%);
+  /* W3C gradient syntax for WebKit */
   background-image:
     url(../images/bg-bike.png),
     -webkit-linear-gradient(top,
@@ -374,6 +368,16 @@ aside article {
     rgba(0,0,0,0) 83%, 
     rgba(0,0,0,0.06) 92%, 
     rgba(0,0,0,0) 98%);
+  /* W3C gradient syntax for Opera */
+  background-image:
+    url(../images/bg-bike.png), 
+    -webkit-gradient(linear, 
+    from(rgba(0,0,0,0.4)), 
+    color-stop(37%, rgba(0,0,0,0)),
+    color-stop(83%, rgba(0,0,0,0)), 
+    color-stop(92%, rgba(0,0,0,0.16)), 
+    color-stop(98%, rgba(0,0,0,0)));
+
   background-position: 50% 88%, 0 0;
     -webkit-transition: background-position  1s linear 250ms;
   -moz-transition: background-position  1s linear 250ms;
@@ -381,20 +385,7 @@ aside article {
   transition: background-position  1s linear 250ms;
 }
 
-#ad2 a {
-  font-family: LeagueGothic, Arial Narrow, Arial, sans-serif;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  padding: 0 5px;
-  text-shadow: #fff 1px 1px;
-}
-
-.module:hover {
-  background-position: 150% 88%, 0 0;
-}
-#ad2  h1 {
+#ad2 h1 {
   color: #484848;
   text-align: center;
   text-transform: uppercase;
@@ -402,8 +393,18 @@ aside article {
   font-family: LeagueGothic, Arial Narrow, Helvetica, sans-serif;
   font-size: 42px;
   letter-spacing:-1px;
-  margin: 20px 5px;
+  margin: 20px 5px;    
+  text-shadow: #fff 1px 1px;
 }
+
+#ad2 a {
+  text-decoration: none;
+}
+
+#ad2:hover {
+  background-position: 150% 88%, 0 0;
+}
+
 
 aside > article:nth-of-type(3) {
   background-image:url(../images/dukes.png);
@@ -436,7 +437,7 @@ aside > article:nth-of-type(3) {
 aside p + a {
   display: block;
   text-decoration: none;
-  font-family: AcknowledgementMedium;
+
   border: 5px double;
   color: #ffffff; 
   background-color: #484848; 
@@ -444,9 +445,10 @@ aside p + a {
   font-size: 28px;
   margin: 5px 5px 9px 5px;
   padding: 15px 0;
-  -webkit-box-shadow: 2px 5px #484848;
-  -moz-box-shadow: 2px 5px #484848;
-  box-shadow: 2px 5px #484848;
+  font-family: AcknowledgementMedium;
+  -webkit-box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+  -moz-box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+  box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -454,7 +456,7 @@ aside p + a {
 
 }
 
-#ad1 a.wanted:hover {
+aside p + a:hover {
   -webkit-box-shadow: 4px 10px #484848;
   -moz-box-shadow: 4px 10px #484848;
   box-shadow: 4px 10px #484848;  
