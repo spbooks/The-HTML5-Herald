@@ -31,6 +31,7 @@
 <div id="main">
   <div id="column-1">
     <article id="ac1">
+    <div id="video-container">
       <video width="373" height="280" preload id="video" poster="images/poster.jpg" controls>
         <!-- MP4 must be first for iPad! -->
 			<source src="media/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
@@ -47,13 +48,13 @@
 			</object>
       </video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
-            
 		<div id="controls" class="displaynone">
 			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
 			<div id="timer">00:00</div>
 			<div id="muteUnmute" class="unmuted" tabindex="2">Mute/Unmute</div>
 		</div><!-- #controls -->
 
+    </div> <!-- /#video-container -->
       
       <h1>Video is the final frontier, and now we have conquered it!</h1>
             
