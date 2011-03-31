@@ -277,6 +277,22 @@ aside {
   clear:both;
 }
 
+#ac1
+{
+	position:relative;
+	margin-bottom: 25px;
+}
+#canvasOverlay
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	/* to avoid seeing the video in color for a second before the JavaScript runs 
+	 * show a black background instead*/
+	background-color: black;
+	margin-bottom:25px;
+	
+}
 
 #column-2 article{
   padding: 0 4px 0 4px;
@@ -504,7 +520,36 @@ aside p + a:hover {
 #ad3 p {
   padding: 5px 3px 0 75px;	
   font-size: 0.85em;
-}		
+}
+
+#ad4 h1
+{
+	font-size: 20px;
+    font-family: AcknowledgementMedium;	
+	text-align:center;
+}	
+
+#ad4
+{
+	height:140px;
+	position:relative;
+
+}
+
+#mapDiv
+{
+	height: 140px;
+	width: 236px;
+}
+
+#spinner
+{
+	position:absolute;
+	top:20px;
+	left:65px;
+}
+	
+	
 /* Forms */
 form {
   border: solid 2px #888;
@@ -521,6 +566,17 @@ form {
   padding: 20px;
   min-height: 300px;
   background: rgba(0,0,0,0.2) url(../images/bg-form.png) no-repeat bottom center;
+}
+
+form#geoForm
+{
+	padding: 0px;
+	border:none;
+	min-height:0px;
+	background:none;
+	filter: none;
+	-ms-filter:none;
+	-moz-box-shadow: none;
 }
 
 form ul {
@@ -554,22 +610,27 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
   width: 50%;
 }
 
+input#zipcode {
+	width:25%;
+	display:inline;
+	margin-right: 25px;
+}
 input[type=number] {
   width: 3em;
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]) {
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]) {
   background: transparent no-repeat top right;
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):required {
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):required {
   background-image: url('../images/required.png'); 
 }
 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:invalid { 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):focus:invalid { 
   background-image: url('../images/invalid.png');
 } 
-input:not([type=range]):not([type=date]):not([type=submit]):not([type=checkbox]):not([type=number]):focus:valid { 
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=number]):focus:valid { 
   background-image: url('../images/valid.png');
 }
 
@@ -585,7 +646,7 @@ input {
   text-align: center;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   border: none;
   -moz-border-radius: 10%;
   border-radius: 5px;
@@ -610,6 +671,9 @@ input[type=submit] {
   -moz-transition: opacity .25s linear;
  
 }
+
+
+
 input[type=submit]:hover {
   opacity: 1;
   -webkit-transition: opacity .25s linear;

@@ -1,14 +1,10 @@
 CACHE MANIFEST
-
+#v0.1
 index.html
 register.html
 
 js/hyphenator.js
 js/modernizr-1.7.min.js
-
-media/bamboo.mp4
-media/bamboo.ogv
-
 images/bg-bike.png
 images/bg-form.png
 images/bg-formtitle-left.png
@@ -21,11 +17,9 @@ images/cat.png
 images/dukes.gif
 images/dukes.png
 images/logo-sp.gif
-
 images/logo.png
 images/module.svg
 images/poster.jpg
-
 fonts/League_Gothic-webfont.eot
 fonts/League_Gothic-webfont.svg
 fonts/League_Gothic-webfont.ttf
@@ -35,7 +29,10 @@ fonts/carnevalee_freakshow-webfont.svg
 fonts/carnevalee_freakshow-webfont.ttf
 fonts/carnevalee_freakshow-webfont.woff
 
-NETWORK
-*
+FALLBACK:
+media/	images/video-fallback.jpg
+/ /offline.html
 
+NETWORK:
+*
 
