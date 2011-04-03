@@ -4,9 +4,6 @@ function makeVideoOldTimey (){
     var context = canvas.getContext('2d');
 	
     video.addEventListener('play', function(){
-        var ch = video.clientHeight;
-        canvas.height = ch ;
-
         draw(video,context,canvas);
     },false);
 
