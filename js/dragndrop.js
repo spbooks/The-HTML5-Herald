@@ -1,11 +1,11 @@
 function dragSetup(event)
 {
-    event.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
+  event.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
 }
 
 function dragOver(event)
 {
-    event.preventDefault();
+  event.preventDefault();
 }
 
 function itemDropped(event)

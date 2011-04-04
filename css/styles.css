@@ -365,7 +365,7 @@ aside article {
   height: 170px;
   background-image:
     url(../images/bg-bike.png), 
-    url(../images/module.svg);
+    url(../images/gradient.svg);
   /* Mozilla gradient syntax */
   background-image:
     url(../images/bg-bike.png),
@@ -386,6 +386,24 @@ aside article {
     rgba(0,0,0,0) 98%);
   /* W3C gradient syntax for Opera */
   background-image:
+    url(../images/bg-bike.png),
+    -o-linear-gradient(top,
+    rgba(0,0,0,0.4) 0, 
+    rgba(0,0,0,0) 37%,
+    rgba(0,0,0,0) 83%, 
+    rgba(0,0,0,0.06) 92%, 
+    rgba(0,0,0,0) 98%);
+  /* Unprefixed W3C syntax */ 
+  background-image:
+    url(../images/bg-bike.png),
+    linear-gradient(top,
+    rgba(0,0,0,0.4) 0, 
+    rgba(0,0,0,0) 37%,
+    rgba(0,0,0,0) 83%, 
+    rgba(0,0,0,0.06) 92%, 
+    rgba(0,0,0,0) 98%);
+  /* Old WebKit syntax */
+  background-image:
     url(../images/bg-bike.png), 
     -webkit-gradient(linear, 
     from(rgba(0,0,0,0.4)), 
@@ -395,7 +413,7 @@ aside article {
     color-stop(98%, rgba(0,0,0,0)));
 
   background-position: 50% 88%, 0 0;
-    -webkit-transition: background-position  1s linear 250ms;
+  -webkit-transition: background-position  1s linear 250ms;
   -moz-transition: background-position  1s linear 250ms;
   -o-transition: background-position  1s linear 250ms;
   transition: background-position  1s linear 250ms;
@@ -469,7 +487,6 @@ aside p + a {
   -moz-border-radius: 15px;
   border-radius: 15px;
   position: relative;
-
 }
 
 aside p + a:hover {
@@ -491,30 +508,50 @@ aside p + a:hover {
 }
 #ad3 h1 span {
   font-size: 30px;
-  
   color: #999999;
   display:inline-block;
-	/* Firefox */
+  -webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out, -moz-transform 0.2s ease-out;
+  -o-transition: color 0.2s ease-out, -o-transform 0.2s ease-out;
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+
+/*
+
+  -webkit-transition-property: -webkit-transform, color;
+  -moz-transition-property: -moz-transform, color;
+  -o-transition-property: -o-transform, color;
+  transition-property: transform, color; 
+  -webkit-transition-duration: 0.2s;
+-moz-transition-duration: 0.2s;
+-o-transition-duration: 0.2s; 
+transition-duration: 0.2s;  
+-webkit-transition-timing-function: ease-out;
+-moz-transition-timing-function: ease-out;
+-o-transition-timing-function: ease-out;
+transition-timing-function: ease-out; 
+*/
+
+
+
+
+}
+
+.holding {	/* Firefox */
 	-moz-transition: all 0.3s ease;
 	/* WebKit */
 	-webkit-transition: all 0.3s ease;
 	/* Opera */
 	-o-transition: all 0.3s ease;
 	/* Standard */
-	transition: all 0.3s ease;
+	transition: all 0.3s ease;}
 
-
-}
-#ad3 h1:hover {
-
-}
 #ad3 h1:hover span {
   color: #484848;
-  -webkit-transform:rotate(10deg) translateX(40px) scale(1.5,1.5));
-  -moz-transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
-  -ms-transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
-  -o-transform:rotate(10deg)translateX(40px) scale(1.5,1.5);
-  transform:rotate(10deg) translateX(40px) scale(1.5,1.5);
+  -webkit-transform:rotate(10deg) translateX(40px) scale(1.5);
+  -moz-transform:rotate(10deg) translateX(40px) scale(1.5);
+  -ms-transform:rotate(10deg) translateX(40px) scale(1.5);
+  -o-transform:rotate(10deg)translateX(40px) scale(1.5);
+  transform:rotate(10deg) translateX(40px) scale(1.5);
 }
 
 #ad3 p {
@@ -651,13 +688,22 @@ input[type=submit], input[type=button] {
   -moz-border-radius: 10%;
   border-radius: 5px;
   background-color: #333;
+  /* SVG for IE9 and Opera */
+  background-image: url(../images/button-gradient.svg);
+  /* Old WebKit */
   background-image: -webkit-gradient(radial, 30% 120%, 0, 30% 120%, 100, 
     color-stop(0,rgba(144,144,144,1)), 
     color-stop(1,rgba(72,72,72,1)));
+  /* W3C for Mozilla */
   background-image: -moz-radial-gradient(30% 120%, circle, 
     rgba(144,144,144,1) 0%, 
     rgba(72,72,72,1) 50%);
-  background-image: linear-gradient(30% 120%, circle,
+  /* W3C for new WebKit */
+  background-image: -webkit-radial-gradient(30% 120%, circle, 
+    rgba(144,144,144,1) 0%, 
+    rgba(72,72,72,1) 50%);
+  /* W3C unprefixed */
+  background-image: radial-gradient(30% 120%, circle,
     rgba(144,144,144, 1) 0%,
     rgba(72,72,72,1) 50%);
   color: #fff;
