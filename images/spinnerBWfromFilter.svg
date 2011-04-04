@@ -15,7 +15,7 @@
    id="svg3816"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="spinnerBWfromFilter.svg">
+   sodipodi:docname="spinner.svg">
   <defs
      id="defs3818">
     <inkscape:perspective
@@ -42,9 +42,10 @@
        x2="876.95422"
        y2="1319.9257" />
     <linearGradient
+       inkscape:collect="always"
        id="linearGradient3731">
       <stop
-         style="stop-color:#000000;stop-opacity:1;"
+         style="stop-color:#6f918a;stop-opacity:1;"
          offset="0"
          id="stop3733" />
       <stop
@@ -106,6 +107,117 @@
        id="linearGradient3814"
        xlink:href="#linearGradient3731"
        inkscape:collect="always" />
+    <filter
+       id="filter4109"
+       inkscape:label="Moonarize"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="An effect between solarize and invert which often preserves sky and water lights"
+       y="0"
+       x="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix4111"
+         type="hueRotate"
+         values="180"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4113"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         result="result3" />
+      <feBlend
+         id="feBlend4115"
+         in2="result3"
+         mode="lighten"
+         in="fbSourceGraphic"
+         result="result2" />
+      <feBlend
+         id="feBlend4117"
+         in2="result2"
+         mode="multiply"
+         result="result1"
+         in="result2" />
+      <feComposite
+         id="feComposite4119"
+         in2="SourceGraphic"
+         operator="in" />
+    </filter>
+    <filter
+       id="filter4121"
+       inkscape:label="Moonarize"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="An effect between solarize and invert which often preserves sky and water lights"
+       y="0"
+       x="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix4123"
+         type="hueRotate"
+         values="180"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4125"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         result="result3" />
+      <feBlend
+         id="feBlend4127"
+         in2="result3"
+         mode="lighten"
+         in="fbSourceGraphic"
+         result="result2" />
+      <feBlend
+         id="feBlend4129"
+         in2="result2"
+         mode="multiply"
+         result="result1"
+         in="result2" />
+      <feComposite
+         id="feComposite4131"
+         in2="SourceGraphic"
+         operator="in" />
+    </filter>
+    <filter
+       id="filter4133"
+       inkscape:label="Moonarize"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="An effect between solarize and invert which often preserves sky and water lights"
+       y="0"
+       x="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix4135"
+         type="hueRotate"
+         values="180"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4137"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         result="result3" />
+      <feBlend
+         id="feBlend4139"
+         in2="result3"
+         mode="lighten"
+         in="fbSourceGraphic"
+         result="result2" />
+      <feBlend
+         id="feBlend4141"
+         in2="result2"
+         mode="multiply"
+         result="result1"
+         in="result2" />
+      <feComposite
+         id="feComposite4143"
+         in2="SourceGraphic"
+         operator="in" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -115,7 +227,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="158.46276"
+     inkscape:cx="284.89133"
      inkscape:cy="169.38622"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -152,7 +264,7 @@
     <g
        inkscape:transform-center-y="-23.795377"
        inkscape:transform-center-x="-6.8374727"
-       style="fill:url(#linearGradient3737);fill-opacity:1"
+       style="fill:url(#linearGradient3737);fill-opacity:1;filter:url(#filter4109)"
        transform="matrix(-0.06974118,-0.1188729,0.12542151,-0.0660998,-18.561627,487.60073)"
        id="g3727">
       <path
@@ -165,7 +277,7 @@
     <g
        id="g3739"
        transform="matrix(0.1434888,0.00219235,-0.00231312,0.13599685,-143.3223,131.45679)"
-       style="fill:url(#linearGradient3745);fill-opacity:1"
+       style="fill:url(#linearGradient3745);fill-opacity:1;filter:url(#filter4121)"
        inkscape:transform-center-x="-15.072566"
        inkscape:transform-center-y="19.749702">
       <path
@@ -178,7 +290,7 @@
     <g
        inkscape:transform-center-y="6.6191386"
        inkscape:transform-center-x="29.069565"
-       style="fill:url(#linearGradient3753);fill-opacity:1"
+       style="fill:url(#linearGradient3753);fill-opacity:1;filter:url(#filter4133)"
        transform="matrix(-0.07374762,0.11668055,-0.12310839,-0.06989705,244.47889,207.12423)"
        id="g3747">
       <path

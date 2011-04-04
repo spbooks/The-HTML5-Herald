@@ -10,8 +10,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="350"
-   height="350"
+   width="125"
+   height="125"
    id="svg3816"
    version="1.1"
    inkscape:version="0.48.1 r9760"
@@ -149,12 +149,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(34.389891,11.885552)">
+     transform="translate(34.389891,-213.11445)">
     <g
-       inkscape:transform-center-y="-77.522963"
-       inkscape:transform-center-x="-21.112732"
+       inkscape:transform-center-y="-23.795377"
+       inkscape:transform-center-x="-6.8374727"
        style="fill:url(#linearGradient3737);fill-opacity:1"
-       transform="matrix(-0.21534666,-0.38727626,0.38727626,-0.21534666,-2.568987,841.18938)"
+       transform="matrix(-0.06974118,-0.1188729,0.12542151,-0.0660998,-18.561627,487.60073)"
        id="g3727">
       <path
          d="m 1519.1253,921.97391 c 1.5263,1.89879 58.968,135.42389 -20.7176,278.72929 -95.6499,172.0153 -282.3848,173.492 -286.3294,171.2986 l 0.7739,69.1982 -124.45,-153.2 125,-149 0,80.3108 c 3.1972,-0.1207 99.3148,-0.5026 151.8763,-92.6355 34.47,-60.421 18.9219,-124.7238 18.5012,-126.6267 l 98.9193,17.4404 36.4263,-95.51509 z"
@@ -165,10 +165,10 @@
     </g>
     <g
        id="g3739"
-       transform="matrix(0.44306441,0.00714245,-0.00714245,0.44306441,-387.80472,-319.09273)"
+       transform="matrix(0.1434888,0.00219235,-0.00231312,0.13599685,-143.3223,131.45679)"
        style="fill:url(#linearGradient3745);fill-opacity:1"
-       inkscape:transform-center-x="-46.541043"
-       inkscape:transform-center-y="64.342553">
+       inkscape:transform-center-x="-15.072566"
+       inkscape:transform-center-y="19.749702">
       <path
          sodipodi:nodetypes="cscccccsccc"
          id="path3741"
@@ -177,10 +177,10 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       inkscape:transform-center-y="21.564513"
-       inkscape:transform-center-x="89.760961"
+       inkscape:transform-center-y="6.6191386"
+       inkscape:transform-center-x="29.069565"
        style="fill:url(#linearGradient3753);fill-opacity:1"
-       transform="matrix(-0.22771775,0.38013381,-0.38013381,-0.22771775,809.64693,-72.575598)"
+       transform="matrix(-0.07374762,0.11668055,-0.12310839,-0.06989705,244.47889,207.12423)"
        id="g3747">
       <path
          d="m 1519.1253,921.97391 c 1.5263,1.89879 58.968,135.42389 -20.7176,278.72929 -95.6499,172.0153 -282.3848,173.492 -286.3294,171.2986 l 0.7739,69.1982 -124.45,-153.2 125,-149 0,80.3108 c 3.1972,-0.1207 99.3148,-0.5026 151.8763,-92.6355 34.47,-60.421 18.9219,-124.7238 18.5012,-126.6267 l 98.9193,17.4404 36.4263,-95.51509 z"

@@ -3,7 +3,7 @@ function determineLocation(){
         navigator.geolocation.getCurrentPosition(displayOnMap);
 
 		var container = Raphael(document.getElementById("spinner"), 125, 125);
-        var spinner = container.image("images/spinnerBW.png", 0, 0, 100, 100);
+        var spinner = container.image("images/spinnerBW.svg", 0, 0, 125, 125);
         var attrsToAnimate = { rotation: "720" }; 
 		spinner.animate(attrsToAnimate, 60000);        
     }
