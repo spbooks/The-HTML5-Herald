@@ -470,6 +470,17 @@ aside p + a {
 
 }
 
+.draganddrop #mouseContainer
+{
+  text-align:center;
+}
+
+.no-draganddrop #mouseContainer
+{
+  visibility:hidden;
+  height:0px;
+}
+
 #ad1 a.wanted:hover {
   -webkit-box-shadow: 4px 10px #484848;
   -moz-box-shadow: 4px 10px #484848;
