@@ -1,3 +1,7 @@
+$('document').ready(function(){
+  $('#geobutton').click(determineLocation);
+});
+
 function determineLocation(){
     if (Modernizr.geolocation) {
         navigator.geolocation.getCurrentPosition(displayOnMap);
