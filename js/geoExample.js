@@ -3,18 +3,22 @@ $('document').ready(function(){
 });
 
 function determineLocation(){
+  if (navigator.onLine) {
     if (Modernizr.geolocation) {
-        navigator.geolocation.getCurrentPosition(displayOnMap);
-
-		var container = Raphael(document.getElementById("spinner"), 125, 125);
-        var spinner = container.image("images/spinnerBW.svg", 0, 0, 125, 125);
-        var attrsToAnimate = { rotation: "720" }; 
-		spinner.animate(attrsToAnimate, 60000);        
+      navigator.geolocation.getCurrentPosition(displayOnMap);
+  
+      var container = Raphael(document.getElementById("spinner"), 125, 125);
+      var spinner = container.image("images/spinnerBW.svg", 0, 0, 125, 125);
+      var attrsToAnimate = { rotation: "720" }; 
+  		spinner.animate(attrsToAnimate, 60000);        
     }
     else {
-        // geolocation is not supported in this browser
-        // we can use Google Gears as a fallback
+      // geolocation is not supported in this browser
+      // we can use Google Gears as a fallback
     }
+  } else {
+    alert("You must be online to use this feature.");
+  }
 }
 
 function displayOnMap(position){

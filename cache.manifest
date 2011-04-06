@@ -1,10 +1,12 @@
 CACHE MANIFEST
-#v0.1
+#v0.2
 index.html
 register.html
 
 js/hyphenator.js
 js/modernizr-1.7.min.js
+css/screen.css
+css/styles.css
 images/bg-bike.png
 images/bg-form.png
 images/bg-formtitle-left.png
@@ -18,20 +20,21 @@ images/dukes.gif
 images/dukes.png
 images/logo-sp.gif
 images/logo.png
-images/module.svg
-images/poster.jpg
+images/gradient.svg
+images/ford-plane-still.png
+images/spinnerBW.svg
 fonts/League_Gothic-webfont.eot
 fonts/League_Gothic-webfont.svg
 fonts/League_Gothic-webfont.ttf
 fonts/League_Gothic-webfont.woff
-fonts/carnevalee_freakshow-webfont.eot
-fonts/carnevalee_freakshow-webfont.svg
-fonts/carnevalee_freakshow-webfont.ttf
-fonts/carnevalee_freakshow-webfont.woff
+fonts/Acknowledgement-webfont.eot
+fonts/Acknowledgement-webfont.svg
+fonts/Acknowledgement-webfont.ttf
+fonts/Acknowledgement-webfont.woff
 
 FALLBACK:
-media/	images/video-fallback.jpg
-/ /offline.html
+media/	images/ford-plane-still.png
+/ offline.html
 
 NETWORK:
 *
