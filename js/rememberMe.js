@@ -1,6 +1,11 @@
 /**
  * @author alexisgoldstein
  */
+  $('document').ready(function(){
+    loadStoredDetails();
+    $('#rememberme').change(saveData);
+  });
+ 
 	function loadStoredDetails(){
 		if (Modernizr.localstorage) {
 			var name = localStorage.getItem("name");
@@ -8,11 +13,11 @@
 			var remember = localStorage.getItem("remember");
 			
 			if (name) {
-				$("#register-name").val(name);
+				$("#name").val(name);
 			}
 			
 			if (email) {
-				$("#address").val(email);
+				$("#email").val(email);
 			}
 			
 			if (remember =="true")
@@ -29,11 +34,11 @@
 	function saveData(){
 		if (Modernizr.localstorage) {
 		// We need to check that the checkbox is ON, not just 
-		// that's it's been checked (onClick is also fired for
+		// that's it's been clicked (the change event is also fired for
 		// UNchecking the box).
 			if ($("#rememberme").attr("checked")) {
-				var email = $("#address").val();
-				var name = $("#register-name").val();
+				var email = $("#email").val();
+				var name = $("#name").val();
 				
 				localStorage.setItem("name", name);
 				localStorage.setItem("email", email);

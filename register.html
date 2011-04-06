@@ -5,10 +5,9 @@
   <title>The HTML5 Herald</title>
   <link rel="stylesheet" href="css/styles.css?v=1.0"/>
   <script src="js/modernizr-1.7.min.js"></script>
-  <script type="text/javascript" src="js/rememberMe.js"></script>
 
 </head>
-<body onLoad="loadStoredDetails()">
+<body>
 <header>
   <hgroup>
     <h1><span>The </span><a href="index.html">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
@@ -33,13 +32,16 @@
 
   <ul>
     <li>
-      <label for="register-name">My name is:</label>
-      <input type="text" id="register-name" name="name" required>
+      <label for="name">My name is:</label>
+      <input type="text" id="name" name="name" required>
     </li>
     <li>
       <label for="email">My email address is:</label>
       <input type="email" id="email" name="email" required>
     </li>
+    	<li>          <label for="rememberme">Remember me on this computer</label>
+          <input type="checkbox"  value="yes"  id="rememberme"> 
+	</li>
     <li>
       <label for="url">My website is located at:</label>
       <input type="url" id="url" name="url" placeholder="http://example.com">
@@ -63,12 +65,7 @@
       <label for="upsell">Also sign me up for <cite>The CSS3 Chronicle</cite></label>
       <input id="upsell" name="upsell" type="checkbox">
     </li>
-	<li>
-		<span>
-          <label for="rememberme">Remember me on this computer</label>
-          <input type="checkbox"  value="yes"  id="rememberme" onClick="saveData()"/> 
-        </span>
-	</li>
+
   </ul>
   <input type="submit" id="register-submit" value="Send Post Haste"/>
 </form>
@@ -111,6 +108,7 @@ if (!Modernizr.input.placeholder) {
 }
 		</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rememberMe.js"></script>
 
 </body>
 </html>
