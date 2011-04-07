@@ -2,11 +2,14 @@ CACHE MANIFEST
 #v0.3
 index.html
 register.html
+canvas/index.html
+canvas/demo1.html
 
 js/hyphenator.js
 js/modernizr-1.7.min.js
 css/screen.css
 css/styles.css
+css/canvas.css
 images/bg-bike.png
 images/bg-form.png
 images/bg-formtitle-left.png
