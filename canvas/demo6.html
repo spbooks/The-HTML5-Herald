@@ -2,15 +2,16 @@
 <html class="no-js" lang="en" manifest="../cache.manifest">
 <head>
   <meta charset="utf-8">
-  <title>Canvas Demo #1</title>
+  <title>Canvas Demo #6</title>
   <link rel="stylesheet" href="../css/canvas.css">
-  <script src="js/modernizr-1.7.min.js"></script>
+  <script src="../js/modernizr-1.7.min.js"></script>
 </head>
 <body>
 <div id="main">
 <canvas width="200" height="200" id="myCanvas">
 Sorry! Your browser doesn’t support Canvas.
 </canvas>
+<img src="../images/html5-logo.png" id="myImageElem">
 </div>
 
 <!-- jQuery version might not be the latest; check jquery.com -->
@@ -28,11 +29,13 @@ function draw() {
 
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
-  context.strokeStyle = "red";
-  context.fillStyle = "rgba(0, 0, 255, 0.50)";
-  context.fillRect(10,10,100,100);
-  context.strokeRect(10,10,100,100);
+  var image = document.getElementById("myImageElem");
+    context.drawImage(image, 68, 68);
+}
 
+function saveDrawing() {
+  var canvas = document.getElementById("myCanvas");
+  window.open(canvas.toDataURL("image/png"));
 }
 
 </script>

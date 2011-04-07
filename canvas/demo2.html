@@ -2,9 +2,9 @@
 <html class="no-js" lang="en" manifest="../cache.manifest">
 <head>
   <meta charset="utf-8">
-  <title>Canvas Demo #1</title>
+  <title>Canvas Demo #2</title>
   <link rel="stylesheet" href="../css/canvas.css">
-  <script src="js/modernizr-1.7.min.js"></script>
+  <script src="../js/modernizr-1.7.min.js"></script>
 </head>
 <body>
 <div id="main">
@@ -29,9 +29,16 @@ function draw() {
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
   context.strokeStyle = "red";
-  context.fillStyle = "rgba(0, 0, 255, 0.50)";
-  context.fillRect(10,10,100,100);
-  context.strokeRect(10,10,100,100);
+
+  var img = new Image();
+  img.src = "../images/bg-bike.png";
+  img.onload = function() {
+    pattern = context.createPattern(img, "repeat");
+    context.fillStyle = pattern;
+    context.fillRect(10,10,100,100);
+    context.strokeRect(10,10,100,100);  
+  }
+
 
 }
 

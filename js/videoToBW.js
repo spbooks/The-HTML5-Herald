@@ -11,7 +11,7 @@ function makeVideoOldTimey ()
 }
 
 function draw(video, context, canvas) {
-    if (video.paused || video.ended) 
+  if (video.paused || video.ended) 
 	{
 		return false;
 	}
@@ -24,8 +24,8 @@ function draw(video, context, canvas) {
 	{
 		return false;
 	}
-    // Start over!
-    setTimeout(function(){ draw(video, context, canvas); }, 0);
+  // Start over!
+  setTimeout(function(){ draw(video, context, canvas); }, 0);
 }
 
 function drawOneFrame(video, context, canvas){
