@@ -37,14 +37,14 @@
 			<source src="media/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
 			<source src="media/ford-plane-takes-off.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
         <!-- fallback to Flash: -->
-			<object width="373" height="280" type="application/x-shockwave-flash" data="http://player.longtailvideo.com/player.swf">
+			<object width="373" height="280" type="application/x-shockwave-flash" data="jwplayer/player.swf">
 				<!-- Firefox uses the 'data' attribute above, IE/Safari uses the param below -->
-				<param name="movie" value="http://player.longtailvideo.com/player.swf" >
+				<param name="movie" value="jwplayer/player.swf" >
 				<param name="allowFullScreen" value="true" >
 				<param name="wmode" value="transparent" >
-				<param name="flashvars" value="controlbar=over&amp;image=images/ford-plane-still.png&amp;file=media/media/ford-plane-takes-off.mp4">
+				<param name="flashvars" value="controlbar=over&amp;image=images/ford-plane-still.png&amp;file=../media/ford-plane-takes-off.mp4">
 				<!-- fallback image. note the title field below, put the title of the video there -->
-				<img src="images/ford-plane-still.png" width="373" height="280" alt="Airplane" title="No video playback capabilities, please download the video below">
+				<img src="images/ford-plane-still.png" id="video-still" width="373" height="280" alt="Airplane" title="No video playback capabilities, please download the video below">
 			</object>
      	</video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
@@ -77,7 +77,7 @@
   <div id="secondary">			
     <article id="ac2">
       <hgroup>
-        <h1>Text Shadow is the New Green</h1>
+        <h1>Text Shadow is the New Black</h1>
         <h2>How do we do it?</h2>
       </hgroup>
       <div class="content">
@@ -122,20 +122,20 @@
 
       <article id="ad1">
         <h1>Wanted</h1>
-        <p>For being totally awesome!</p>
+        <p>Dead or Alive</p>
         <a href="http://sitepoint.com/books/htmlcss1/" class="wanted">&lt;HTML5&gt; &amp; {CSS3}</a>
         <p>Reward: Happiness and satisfaction</p>
       </article>
-          
-      <article id="ad2">
-        <h1><a href="http://sitepoint.com/books/htmcss1/">HTML5 and CSS3 <br/>Now in Book Form!</a></h1>
-      </article>
-          
-      <article id="ad3">
+                <article id="ad3">
         <h1>Put your <span>dukes</span> up sire</h1>
         <p>It&rsquo;s time for a good old thrashing.<br>
         I will rotate your moustache OFF!</p>
       </article>
+      <article id="ad2">
+        <h1><a href="http://sitepoint.com/books/htmcss1/">HTML5 and CSS3 <br/>Now in Book Form!</a></h1>
+      </article>
+          
+
 
 	<article id="ad4">
       <div id="mapDiv">      	
@@ -178,11 +178,11 @@
 <script src="js/raphael-min.js"></script>
 
 <!-- jQuery version might not be the latest; check jquery.com -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
 
 <script src="js/geoExample.js"></script>
-<script src="js/general.js"></script>
+<script src="js/videoControls.js"></script>
 <script src="js/dragndrop.js"></script>
 
 <!-- google maps API -->

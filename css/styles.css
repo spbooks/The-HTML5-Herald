@@ -86,7 +86,6 @@ button {  width: auto; overflow: visible; }
          url('../fonts/Acknowledgement-webfont.svg#webfontuCYqM11k') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 html {
@@ -195,15 +194,17 @@ nav {
 }
 
 nav ul {
-  margin: 1px auto 1px auto;
+  margin: 1px auto;
   height: 28px;
   white-space: nowrap;
   text-align: center;
+  width: 10.2em;
+  
 }
 
 nav ul li {
-  display: inline-block;
-  width: 60px;
+  width: 5em;
+  float: left;
 }
 
 nav ul li a{ 
@@ -237,6 +238,10 @@ nav ul li a:hover, nav ul li a:active {
 #main > div:nth-of-type(2), /* both selectors target the same element */
 #secondary {
   width: 130px;	
+}
+
+#secondary {
+  width: 130px;
 }
 
 #main > div:last-of-type, /* both selectors target the same element */
@@ -441,7 +446,8 @@ aside article {
 }
 
 
-aside > article:nth-of-type(3) {
+aside > article:nth-of-type(3),
+#ad3 {
   background-image:url(../images/dukes.png);
   background-position: bottom left;
   -webkit-transition: transform  2s linear 250ms;
@@ -470,25 +476,11 @@ aside > article:nth-of-type(3) {
   text-align: center;
 }
 
-aside p + a {
-  display: block;
-  text-decoration: none;
-
-  border: 5px double;
-  color: #ffffff; 
-  background-color: #484848; 
-  text-align: center;
-  font-size: 28px;
-  margin: 5px 5px 9px 5px;
-  padding: 15px 0;
-  font-family: AcknowledgementMedium;
-  -webkit-box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
-  -moz-box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
-  box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  position: relative;
+aside p + a { display: block; text-decoration: none; border: 5px double; color: #ffffff; background-color: #484848; text-align: center; font-size: 28px; margin: 5px 5px 9px 5px; padding: 15px 0; position: relative;
+ border-radius: 25px;
+ -webkit-box-shadow: 2px 5px 0 0 rgba(72,72,72,1); -moz-box-shadow: 2px 5px 0 0 rgba(72,72,72,1); box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+ text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+ font-family: AcknowledgementMedium, sans-serif;
 }
 
 .draganddrop #mouseContainer
@@ -496,7 +488,8 @@ aside p + a {
   text-align:center;
 }
 
-.no-draganddrop #mouseContainer
+.no-draganddrop #mouseContainer,
+.no-svg #mouseContainer
 {
   visibility:hidden;
   height:0px;
@@ -560,16 +553,15 @@ transition-timing-function: ease-out;
 
 #ad3 h1:hover span {
   color: #484848;
-  -webkit-transform:rotate(10deg) translateX(40px) scale(1.5);
-  -moz-transform:rotate(10deg) translateX(40px) scale(1.5);
-  -ms-transform:rotate(10deg) translateX(40px) scale(1.5);
-  -o-transform:rotate(10deg)translateX(40px) scale(1.5);
-  transform:rotate(10deg) translateX(40px) scale(1.5);
-}
+-webkit-transform:rotate(10deg) translateX(40px) scale(1.5); -moz-transform:rotate(10deg) translateX(40px) scale(1.5); -ms-transform:rotate(10deg) translateX(40px) scale(1.5); -o-transform:rotate(10deg) translateX(40px) scale(1.5); transform:rotate(10deg) translateX(40px) scale(1.5);}
 
 #ad3 p {
   padding: 5px 3px 0 75px;	
   font-size: 0.85em;
+}
+
+.no-geolocation #ad4 {
+  display: none;
 }
 
 #ad4 h1
@@ -756,7 +748,8 @@ form hgroup {
   padding-bottom: 50px;
 }
 /* Page Footer */
-body > footer {
+body > footer,
+#footer {
   background: #d1d1d1;
   height: 32px;
   border-top: solid 1px #888;

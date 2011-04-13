@@ -3,9 +3,14 @@ function makeVideoOldTimey ()
     var video = document.getElementById("video");
     var canvas = document.getElementById("canvasOverlay");
     var context = canvas.getContext("2d");
+    
+    var still = document.getElementById("video-still");
+    
+    // draw a black and white version of the video poster to display by default
+    drawOneFrame(still,context,canvas);
 	
     video.addEventListener("play", function(){
-        draw(video,context,canvas);
+      draw(video,context,canvas);
     },false);
 
 }
