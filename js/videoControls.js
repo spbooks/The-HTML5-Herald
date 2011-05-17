@@ -7,17 +7,19 @@ $(document).ready(function() {
 		muteBtn = $('#muteUnmute'),
 		timeHolder = $('#timer');
 	
-	// The if statement below works in all browsers locally; The "canplaythrough" listener works in all except Firefox.
+
+	// Check to see if the video is already ready (if it's cached, for example)
 	if (videoEl.readyState == 4) {
 		videoEl.removeAttribute("controls");
-		vidControls.removeClass("displaynone");
+		vidControls.removeClass("hidden");
 	}
 
-	videoEl.addEventListener('canplaythrough', function () {
-		videoEl.removeAttribute("controls");
-		vidControls.removeClass("displaynone");
+	videoEl.addEventListener('canplay', function () {
+	  console.log('canplaythrough');
+	  videoEl.removeAttribute("controls");
+		vidControls.removeClass("hidden");
 
-	}, false);
+	}, true);
 
 	// click handler for play/pause btn
 	playPauseBtn.bind('click', function () {
@@ -31,12 +33,14 @@ $(document).ready(function() {
 
 	// listening for 'play' events
 	videoEl.addEventListener('play', function () {
+	  console.log('plAY');
 		playPauseBtn.addClass("playing");
 		playPauseBtn.title = "Pause";
 	}, false);
 
 	// listening for 'pause' events
 	videoEl.addEventListener('pause', function () {
+	  console.log('pause');
 		playPauseBtn.removeClass("playing");
 		playPauseBtn.title = "Play";
 	}, false);

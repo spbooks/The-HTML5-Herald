@@ -18,7 +18,7 @@
     transition: opacity .7s linear;
 }
 
-	.displaynone {
+	.hidden {
 		display: none;
 	}
 

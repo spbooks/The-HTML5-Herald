@@ -6,14 +6,11 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link rel="stylesheet" href="css/screen.css?v=1.0">
 
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <script src="js/modernizr-1.7.min.js"></script>
-	<script src="js/videoToBW.js"></script>
+
 
 </head>
-<body class="hyphenate" onload="makeVideoOldTimey()">
+<body class="hyphenate">
 <header>
   <hgroup>
     <h1><span>The </span><a href="index.html">HTML5 <img src="images/logo.png" alt=""> Herald</a></h1>
@@ -48,7 +45,7 @@
 			</object>
      	</video>
 		<canvas id="canvasOverlay" width="373" height="280"></canvas>
-		<div id="controls" class="displaynone">
+		<div id="controls" class="hidden">
 			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
 			<div id="timer">00:00</div>
 			<div id="muteUnmute" class="unmuted" tabindex="2">Mute/Unmute</div>
@@ -71,6 +68,7 @@
         <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
         <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
         <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
       </div>
     </article>
   </div>	
@@ -95,9 +93,9 @@
       <img src="images/cat.png" id="cat" alt="WAI-ARIA Cat">
       <div class="content">
       	<p id="mouseContainer">
-	    <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse1" draggable="true">
-		  <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse2" draggable="true">
-		  <img src="images/computer-mouse-pic.svg" width="30" alt="mouse treat" id="mouse3" draggable="true">  
+	    <img src="images/computer-mouse-pic.png" width="30" alt="mouse treat" id="mouse1" draggable="true">
+		  <img src="images/computer-mouse-pic.png" width="30" alt="mouse treat" id="mouse2" draggable="true">
+		  <img src="images/computer-mouse-pic.png" width="30" alt="mouse treat" id="mouse3" draggable="true">  
         </p>
         <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
         <p>Nam vestibulum, arcu sodales feugiat.</p>
@@ -106,13 +104,13 @@
     
     <article id="ac4">
       <hgroup>
-        <h1>Wai-Aria? HAHA!</h1>
-        <h2>Form Accessibility</h2>
+        <h1>Modernizr Times</h1>
+        <h2>A New Era</h2>
       </hgroup>
                       
       <div class="content">
         <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
-        <p>Nam vestibulum, arcu sodales feugiat.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. </p>
       </div>
     </article>
   </div>
@@ -171,8 +169,23 @@
 </div><!-- #main -->
 
 <footer>
+  <section id="authors">
+    <section><h1>Alexis Goldstein</h1>
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+    </section>
+    <section><h1>Louis Lazaris</h1>
+      <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+    </section>
+    <section>
+      <h1>Estelle Weyl</h1>
+              <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+    </section>
+  
+  </section>
+  <section id="footerinfo">
     <small>&copy; SitePoint </small>
-    <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.gif" alt="SitePoint" width="74" height="20"></a></p>
+    <p><a href="http://www.sitepoint.com"><img src="images/logo-sp.png" alt="SitePoint" width="70" height="23"></a></p>
+  </section>
 </footer>
 <script src="js/hyphenator.js"></script>  
 <script src="js/raphael-min.js"></script>
@@ -181,9 +194,11 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
 
-<script src="js/geoExample.js"></script>
+<!-- <script src="js/geolocation.js"></script> -->
 <script src="js/videoControls.js"></script>
-<script src="js/dragndrop.js"></script>
+<script src="js/dragDrop.js"></script>
+<script src="js/geolocation.js"></script>
+	<script src="js/videoToBW.js"></script>
 
 <!-- google maps API -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>

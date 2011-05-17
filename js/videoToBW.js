@@ -1,3 +1,7 @@
+$('document').ready(function(){
+  makeVideoOldTimey();
+});
+
 function makeVideoOldTimey ()
 {
     var video = document.getElementById("video");

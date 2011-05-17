@@ -283,11 +283,7 @@ aside {
   clear:both;
 }
 
-#ac1
-{
-	position:relative;
-	margin-bottom: 25px;
-}
+
 #canvasOverlay
 {
 	position:absolute;
@@ -423,6 +419,8 @@ aside article {
   -moz-transition: background-position  1s linear 250ms;
   -o-transition: background-position  1s linear 250ms;
   transition: background-position  1s linear 250ms;
+  
+  
 }
 
 #ad2 h1 {
@@ -488,8 +486,7 @@ aside p + a { display: block; text-decoration: none; border: 5px double; color: 
   text-align:center;
 }
 
-.no-draganddrop #mouseContainer,
-.no-svg #mouseContainer
+.no-draganddrop #mouseContainer
 {
   visibility:hidden;
   height:0px;
@@ -750,10 +747,9 @@ form hgroup {
 /* Page Footer */
 body > footer,
 #footer {
-  background: #d1d1d1;
-  height: 32px;
-  border-top: solid 1px #888;
   clear: both;
+  float: left;
+  width: 758px;
 }
 
 body > footer small {
@@ -770,6 +766,36 @@ body > footer p:last-of-type{
   float: right;
   padding: 5px 0 0 0;
 }
+
+body > footer section {
+  float: left;
+  
+}
+
+body > footer h1 {
+  font-size: 200%;
+}
+
+#authors {
+  padding-top: 10px;
+  padding-right: 20px;
+  background: #d1d1d1;
+  border-top: solid 1px #888;
+  border-bottom: solid 1px #888;
+}
+
+#authors section {
+  width: 226px;
+  padding: 0 0 0 20px;
+}
+
+#footerinfo {
+  clear: both;
+  height: 30px;
+  width: 100%;
+  background: transparent;
+}
+
 
 
 /* PRINT STYLES */
