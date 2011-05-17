@@ -419,8 +419,6 @@ aside article {
   -moz-transition: background-position  1s linear 250ms;
   -o-transition: background-position  1s linear 250ms;
   transition: background-position  1s linear 250ms;
-  
-  
 }
 
 #ad2 h1 {
@@ -500,7 +498,6 @@ aside p + a { display: block; text-decoration: none; border: 5px double; color: 
   left: -2px;
 }
 
-
 #ad3 h1 {
   font-size: 20px;
   font-family: AcknowledgementMedium;	
@@ -509,6 +506,7 @@ aside p + a { display: block; text-decoration: none; border: 5px double; color: 
   color: #999;
   margin: 0 0 0 15px;
 }
+
 #ad3 h1 span {
   font-size: 30px;
   color: #999999;
@@ -517,40 +515,27 @@ aside p + a { display: block; text-decoration: none; border: 5px double; color: 
   -moz-transition: color 0.2s ease-out, -moz-transform 0.2s ease-out;
   -o-transition: color 0.2s ease-out, -o-transform 0.2s ease-out;
   transition: color 0.2s ease-out, transform 0.2s ease-out;
-
-/*
-
-  -webkit-transition-property: -webkit-transform, color;
-  -moz-transition-property: -moz-transform, color;
-  -o-transition-property: -o-transform, color;
-  transition-property: transform, color; 
-  -webkit-transition-duration: 0.2s;
--moz-transition-duration: 0.2s;
--o-transition-duration: 0.2s; 
-transition-duration: 0.2s;  
--webkit-transition-timing-function: ease-out;
--moz-transition-timing-function: ease-out;
--o-transition-timing-function: ease-out;
-transition-timing-function: ease-out; 
-*/
-
-
-
-
 }
 
-.holding {	/* Firefox */
-	-moz-transition: all 0.3s ease;
-	/* WebKit */
-	-webkit-transition: all 0.3s ease;
-	/* Opera */
-	-o-transition: all 0.3s ease;
-	/* Standard */
-	transition: all 0.3s ease;}
+.holding {	
+  /* Firefox */
+  -moz-transition: all 0.3s ease;
+  /* WebKit */
+  -webkit-transition: all 0.3s ease;
+  /* Opera */
+  -o-transition: all 0.3s ease;
+  /* Standard */
+  transition: all 0.3s ease;
+}
 
 #ad3 h1:hover span {
   color: #484848;
--webkit-transform:rotate(10deg) translateX(40px) scale(1.5); -moz-transform:rotate(10deg) translateX(40px) scale(1.5); -ms-transform:rotate(10deg) translateX(40px) scale(1.5); -o-transform:rotate(10deg) translateX(40px) scale(1.5); transform:rotate(10deg) translateX(40px) scale(1.5);}
+  -webkit-transform:rotate(10deg) translateX(40px) scale(1.5); 
+  -moz-transform:rotate(10deg) translateX(40px) scale(1.5); 
+  -ms-transform:rotate(10deg) translateX(40px) scale(1.5); 
+  -o-transform:rotate(10deg) translateX(40px) scale(1.5); 
+  transform:rotate(10deg) translateX(40px) scale(1.5);
+}
 
 #ad3 p {
   padding: 5px 3px 0 75px;	
@@ -561,31 +546,26 @@ transition-timing-function: ease-out;
   display: none;
 }
 
-#ad4 h1
-{
-	font-size: 20px;
-    font-family: AcknowledgementMedium;	
-	text-align:center;
+#ad4 h1 {
+  font-size: 20px;
+  font-family: AcknowledgementMedium;	
+  text-align:center;
 }	
 
-#ad4
-{
-	height:140px;
-	position:relative;
-
+#ad4 {
+  height:140px;
+  position:relative;
 }
 
-#mapDiv
-{
-	height: 140px;
-	width: 236px;
+#mapDiv {
+  height: 140px;
+  width: 236px;
 }
 
-#spinner
-{
-	position:absolute;
-	top:8px;
-	left:55px;
+#spinner {
+  position:absolute;
+  top:8px;
+  left:55px;
 }
 	
 	
@@ -609,13 +589,13 @@ form {
 
 form#geoForm
 {
-	padding: 0px;
-	border:none;
-	min-height:0px;
-	background:none;
-	filter: none;
-	-ms-filter:none;
-	-moz-box-shadow: none;
+  padding: 0px;
+  border:none;
+  min-height:0px;
+  background:none;
+  filter: none;
+  -ms-filter:none;
+  -moz-box-shadow: none;
 }
 
 form ul {
@@ -744,6 +724,7 @@ form h2 {
 form hgroup {
   padding-bottom: 50px;
 }
+
 /* Page Footer */
 body > footer,
 #footer {
@@ -810,29 +791,4 @@ body > footer h1 {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
-}
-
-
-
-/*
- * Media queries for responsive design
-*/
-
-@media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
-
-}
-
-@media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
-
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-
-
-  /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
 }
