@@ -235,6 +235,10 @@ nav ul li a:hover, nav ul li a:active {
   padding-right: 4px;
 }
 
+#primary {
+  width: 375px;
+}
+
 #main > div:nth-of-type(2), /* both selectors target the same element */
 #secondary {
   width: 130px;	
@@ -245,6 +249,13 @@ nav ul li a:hover, nav ul li a:active {
 }
 
 #main > div:last-of-type, /* both selectors target the same element */
+#tertiary,
+aside {
+  width: 244px;
+  margin-right:0;
+  padding-left: 4px;
+}
+
 #tertiary,
 aside {
   width: 244px;
@@ -437,12 +448,10 @@ aside article {
   text-decoration: none;
 }
 
-#ad2:hover {
+.csstransitions #ad2:hover {
   background-position: 150% 88%, 0 0;
 }
 
-
-aside > article:nth-of-type(3),
 #ad3 {
   background-image:url(../images/dukes.png);
   background-position: bottom left;
@@ -744,6 +753,12 @@ body > footer small {
 }
 
 body > footer p:last-of-type{
+  float: right;
+  padding: 5px 0 0 0;
+}
+
+/* Same rules for IE7-8 */
+body footer p {
   float: right;
   padding: 5px 0 0 0;
 }
