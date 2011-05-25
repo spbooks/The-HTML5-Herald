@@ -526,6 +526,10 @@ aside p + a { display: block; text-decoration: none; border: 5px double; color: 
   transition: color 0.2s ease-out, transform 0.2s ease-out;
 }
 
+#ac5 {
+  clear: left;
+}
+
 .holding {	
   /* Firefox */
   -moz-transition: all 0.3s ease;
