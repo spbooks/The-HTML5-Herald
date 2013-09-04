@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en" manifest="../cache.manifest">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Demo #3</title>
+  <link rel="stylesheet" href="../css/canvas.css">
+  <script src="../js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<div id="main">
+<canvas width="400" height="400" id="myCanvas">
+Sorry! Your browser doesn’t support Canvas.
+</canvas>
+<form>
+  <input type="button" name="saveButton" id="saveButton" value="Save Drawing">
+</form>
+</div>
+
+<!-- jQuery version might not be the latest; check jquery.com -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
+
+<!-- Our canvas script -->
+<script>
+
+$('document').ready(function(){
+  draw();
+  $('#saveButton').click(saveDrawing);
+});
+
+function draw() {
+
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+
+  context.beginPath();
+  context.arc(50, 50, 30, 0, Math.PI*2, true);
+  context.closePath();
+  context.strokeStyle = "red";
+  context.fillStyle = "blue";
+  context.lineWidth = 3;
+  context.fill();
+  context.stroke();
+}
+
+function saveDrawing() {
+  var canvas = document.getElementById("myCanvas");
+  window.open(canvas.toDataURL("image/png"));
+}
+
+</script>
+
+</body>
+</html>

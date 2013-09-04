@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="en" manifest="../cache.manifest">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Demo #7</title>
+  <link rel="stylesheet" href="../css/canvas.css">
+  <script src="../js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<div id="main">
+<canvas width="200" height="200" id="myCanvas">
+Sorry! Your browser doesn’t support Canvas.
+</canvas>
+<img src="../images/html5-logo.png" id="myImageElem">
+</div>
+
+<!-- jQuery version might not be the latest; check jquery.com -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
+
+<!-- Our canvas script -->
+<script>
+
+$('document').ready(function(){
+  draw();
+});
+
+function draw() {
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  var image = document.getElementById("myImageElem");
+  context.drawImage(image, 60, 60);
+
+  var imageData = context.getImageData(0, 0, 200, 200);
+  var pixelData = imageData.data;
+    
+  for (var i = 0; i < pixelData.length; i += 4) {
+    var red = pixelData[i];
+    var green = pixelData[i + 1];
+    var blue = pixelData[i + 2];
+        
+    var greyscale = red * 0.3 + green * 0.59 + blue * 0.11;
+        
+    pixelData[i] = greyscale;
+    pixelData[i + 1] = greyscale;
+    pixelData[i + 2] = greyscale;
+  } 
+  context.putImageData(imageData, 0, 0);
+}
+
+
+</script>
+
+</body>
+</html>

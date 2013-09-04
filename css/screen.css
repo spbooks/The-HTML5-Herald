@@ -1,0 +1,78 @@
+
+
+#video-container {
+    width: 373px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+#controls {
+    position: absolute;
+    bottom: 0px;
+    opacity: .5;
+    -webkit-transition: opacity .7s linear;
+    -moz-transition: opacity .7s linear;
+    -ms-transition: opacity .7s linear;
+    -o-transition: opacity .7s linear;
+    transition: opacity .7s linear;
+}
+
+	.hidden {
+		display: none;
+	}
+
+#controls:hover {
+    opacity: 1;
+}
+
+#playPause {
+    width: 25px;
+    height: 25px;
+    float: left;
+    text-indent: -9999em;
+    border-right: solid 1px #000;
+}
+
+.paused {
+    background: #ccc url(../images/controls-sprite.png) no-repeat 0 -75px;
+}
+
+.playing {
+    background-position: 0 -50px;
+}
+
+#playPause:hover {
+    cursor: pointer;
+}
+
+#timer {
+    width: 321px;
+    height: 25px;
+    background: #ccc;
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+#muteUnmute {
+    float: left;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999em;
+    border-left: solid 1px #000;
+    overflow: hidden;
+}
+
+.unmuted {
+    background: #ccc url(../images/controls-sprite.png) no-repeat 0 -25px;
+}
+
+.muted {
+    background-position: 0 0;
+}
+
+#muteUnmute:hover {
+    cursor: pointer;
+}
