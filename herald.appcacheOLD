@@ -1,9 +1,10 @@
 CACHE MANIFEST
-#v0.5
+#v1.7
+
+CACHE: 
 index.html
 register.html
-canvas/index.html
-canvas/demo1.html
+canvas.html
 
 js/hyphenator.js
 js/modernizr-1.7.min.js
@@ -11,7 +12,8 @@ js/videoControls.js
 js/dragDrop.js
 js/geolocation.js
 js/videoToBW.js
-css/screen.css
+js/canvas.js
+
 css/styles.css
 css/canvas.css
 images/bg-bike.png
